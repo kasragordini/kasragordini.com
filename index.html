@@ -7,6 +7,7 @@
   <meta name="description" content="Kasra Gordini | AI, Analytics, and Product Thinking" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -22,6 +23,42 @@
       --max-width: 1180px;
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
+
+    .contact-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+.contact-item i {
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: var(--button-text);
+  border-color: var(--accent);
+}
+
+.contact-item:hover i {
+  color: var(--button-text);
+}
 
     * {
       box-sizing: border-box;
@@ -529,16 +566,25 @@
         </p>
 
         <div class="contact-box">
-          <p>
-            Email:
-            <a class="text-link" href="mailto:your-email@example.com">kasragordini@gmail.com</a>
-          </p>
+  <div class="contact-icons">
 
-          <div class="contact-links">
-            <a class="text-link" href="https://www.linkedin.com/in/kasra-gordini/" target="_blank">LinkedIn</a>
-            <a class="text-link" href="https://github.com/kasragordini" target="_blank">GitHub</a>
-          </div>
-        </div>
+    <a href="mailto:kasragordini@gmail.com" target="_blank" class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/kasra-gordini/" target="_blank" class="contact-item">
+      <i class="fa-brands fa-linkedin-in"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://github.com/kasragordini" target="_blank" class="contact-item">
+      <i class="fa-brands fa-github"></i>
+      <span>GitHub</span>
+    </a>
+
+  </div>
+</div>
       </div>
     </section>
   </main>
