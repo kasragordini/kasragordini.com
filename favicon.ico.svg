@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background -->
+  <rect width="64" height="64" rx="16" fill="#0c1220"/>
+
+  <!-- Subtle gold border -->
+  <rect x="1" y="1" width="62" height="62" rx="15.5" stroke="#c8a97e" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- K -->
+  <text x="8" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#f0ece4" letter-spacing="-1">K</text>
+
+  <!-- G -->
+  <text x="30" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#c8a97e" letter-spacing="-1">G</text>
+
+  <!-- Bottom accent line -->
+  <line x1="10" y1="52" x2="54" y2="52" stroke="#c8a97e" stroke-width="1.5" stroke-opacity="0.35" stroke-linecap="round"/>
+</svg>
