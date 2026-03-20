@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasra Gordini</title>
+  <meta name="description" content="Kasra Gordini | AI, Analytics, and Product Thinking" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://kasragordini.com/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --paper: #fcfbf8;
+      --text: #1e1d1a;
+      --muted: #6e6a63;
+      --line: #ddd7ce;
+      --accent: #1f3a5f;
+      --accent-soft: #2b4a73;
+      --button-text: #f8f6f1;
+      --max-width: 1180px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.92rem;
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+.contact-item i {
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: var(--button-text);
+  border-color: var(--accent);
+}
+
+.contact-item:hover i {
+  color: var(--button-text);
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 245, 240, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(221, 215, 206, 0.7);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 0.98rem;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4d5f78;
+      margin-bottom: 22px;
+    }
+
+     .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 670px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-size: 0.96rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--button-text);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-soft);
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.45);
+    }
+
+    .hero-note {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .portrait-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .portrait-card {
+      width: min(420px, 100%);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-frame {
+      aspect-ratio: 4 / 5;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #e9e4dc;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait-caption {
+      padding: 16px 6px 4px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    section {
+      padding: 90px 0;
+      border-top: 1px solid rgba(221, 215, 206, 0.7);
+    }
+
+    .section-label {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.3rem, 5vw, 3.6rem);
+      line-height: 1;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .section-text {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: rgba(252, 251, 248, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .project-list {
+      margin-top: 34px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .project-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 22px 0;
+      border-top: 1px solid rgba(221, 215, 206, 0.7);
+    }
+
+    .project-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .project-tag {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-content h3 {
+      font-size: 1.18rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .contact-box {
+      margin-top: 34px;
+      padding: 34px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .text-link {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      border-top: 1px solid rgba(221, 215, 206, 0.7);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 900px) {
+  .hero-grid,
+  .two-col,
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 0 50px;
+  }
+
+  .portrait-wrap {
+    order: -1;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav {
+    gap: 16px;
+  }
+
+  .project-item {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 24px, var(--max-width));
+  }
+
+  .brand {
+    font-size: 1.7rem;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 42px 0 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.12;
+    margin-bottom: 16px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.07em;
+    margin-bottom: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
+  .portrait-card {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .portrait-frame {
+    border-radius: 16px;
+  }
+
+  section {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    line-height: 1.1;
+  }
+
+  .section-text,
+  .card p,
+  .project-content p {
+    font-size: 0.98rem;
+  }
+
+  .card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .project-item {
+    padding: 18px 0;
+  }
+
+  .project-content h3 {
+    font-size: 1.08rem;
+  }
+
+  .contact-box {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .site-footer {
+    padding: 24px 0 32px;
+    font-size: 0.9rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Kasra Gordini</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">AI • Analytics • System Thinking</div>
+          <h1>
+            Building intelligent systems for real-world decisions.
+          </h1>
+          <p>
+            I work at the intersection of artificial intelligence, analytics, and business systems. My focus is on designing practical tools that bring greater clarity to operations, support better decisions, and turn complexity into something more usable.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">Read More</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+
+          <div class="hero-note">
+            Personal website of Kasra Gordini.
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-card">
+            <div class="portrait-frame">
+              <img src="profile.jpg" alt="Portrait of Kasra Gordini">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-label">About</div>
+        <h2 class="section-title">How I think about systems and decisions.</h2>
+        <p class="section-text">
+          My work combines structure, curiosity, and implementation. I am interested in how data, systems, and artificial intelligence can be shaped into tools that are not only technically sound, but genuinely useful in real operating environments.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>What I care about</h3>
+            <p>
+              I am drawn to ideas that connect intelligence with action: systems that make work clearer, decisions more grounded, and organizations more capable.
+            </p>
+          </div>
+          <div class="card">
+            <h3>How I think</h3>
+            <p>
+              I value simplicity, depth, and relevance. I prefer solutions that are elegant, understandable, and shaped around real human and business needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">Areas of focus.</h2>
+        <p class="section-text">
+          My interests sit across a set of connected areas where strategy, data, and system design come together in practical ways.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>
+              Exploring practical AI systems that support operations, reasoning, automation, and stronger day-to-day decision-making.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Analytics</h3>
+            <p>
+              Turning raw information into clarity through structured analysis, modeling, and a strong understanding of business context.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Product Thinking</h3>
+            <p>
+              Designing tools and systems with careful attention to usefulness, adoption, and long-term value.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Operations</h3>
+            <p>
+              Applying intelligence to real workflows so that complexity becomes more manageable, operations become clearer, and decisions become more grounded.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">Selected areas of work.</h2>
+
+        <div class="project-list">
+          <div class="project-item">
+            <div class="project-tag">AI Systems</div>
+            <div class="project-content">
+              <h3>Practical intelligence for business environments</h3>
+              <p>
+                Designing systems that use AI to support operational understanding, process improvement, and more thoughtful day-to-day decision-making.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-tag">Analytics</div>
+            <div class="project-content">
+              <h3>Data-driven structure and insight</h3>
+              <p>
+                Building analytical approaches that translate complexity into clear, usable information for teams, leaders, and organizations.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-tag">Product</div>
+            <div class="project-content">
+              <h3>Systems with real-world usefulness</h3>
+              <p>
+                Exploring how intelligent products can move from concept to practical implementation with clarity, usefulness, and focus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Let’s connect.</h2>
+
+        <div class="contact-box">
+  <div class="contact-icons">
+
+    <a href="mailto:kasragordini@gmail.com" target="_blank" class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/kasra-gordini/" target="_blank" class="contact-item">
+      <i class="fa-brands fa-linkedin-in"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://github.com/kasragordini" target="_blank" class="contact-item">
+      <i class="fa-brands fa-github"></i>
+      <span>GitHub</span>
+    </a>
+
+  </div>
+</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 Kasra Gordini
+    </div>
+  </footer>
+</body>
+</html>
