@@ -637,7 +637,7 @@
         }, del ? 55 : 90);
         return () => clearTimeout(t);
       }, [text, wi, ci, del]);
-      return <span style={{color:'var(--navy-light)', fontStyle:'italic'}}>{text}<span style={{borderRight:'1.5px solid var(--navy-light)', marginLeft:'2px', animation:'blink 0.9s step-end infinite'}}></span></span>;
+      return <span style={{color:'var(--navy-light)', fontStyle:'italic'}}>{text}</span>;
     }
 
     // ── Nav scrolled
