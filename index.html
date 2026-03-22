@@ -248,7 +248,7 @@
     #home {
       position: relative; height: 100vh; min-height: 700px;
       overflow: hidden; display: flex; align-items: center;
-      padding-top: 80px;
+      padding-top: 80px; background: #0a0a0f !important;
     }
     .hero-photo {
       position: absolute; inset: 0;
@@ -266,13 +266,20 @@
         transparent 75%
       );
     }
-    .hero-overlay-bottom {
+    /*.hero-overlay-bottom {
       position: absolute; inset: 0;
       background: linear-gradient(to top,
         var(--hero-bottom) 0%,
         var(--hero-bottom-mid) 18%,
         transparent 40%
-      );
+      );*/
+      .hero-overlay-bottom {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top,
+        rgba(10,10,15,1) 0%,
+        rgba(10,10,15,0.4) 8%,
+        transparent 20%
+      ) !important;
     }
     .hero-overlay-vignette {
       position: absolute; inset: 0;
