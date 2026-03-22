@@ -163,6 +163,37 @@
     a { color: inherit; text-decoration: none; cursor: none; }
     button { cursor: none; }
 
+
+    /* Force nav to always be dark */
+    nav {
+      color: #ede8e0;
+    }
+    nav .nav-brand,
+    nav .nav-links a {
+      color: rgba(237,232,224,0.6);
+    }
+    nav .nav-brand b {
+      color: #a07de0;
+    }
+    nav.scrolled {
+      background: rgba(10,10,15,0.85) !important;
+      border-bottom: 1px solid rgba(124,92,191,0.12) !important;
+    }
+    
+    /* Force hero to always be dark */
+    #home {
+      background: #0a0a0f;
+    }
+    .hero-kicker {
+      color: #a07de0 !important;
+    }
+    .hero-name {
+      color: #ede8e0 !important;
+    }
+    .hero-desc {
+      color: rgba(237,232,224,0.5) !important;
+    }
+    
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 500;
