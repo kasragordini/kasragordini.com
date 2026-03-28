@@ -111,7 +111,7 @@
     }
 
 
-      .site-header {
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
@@ -180,6 +180,26 @@
     body.dark .site-header {
       background: rgba(15, 17, 21, 0.9);
       border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    body.dark .contact-item {
+      background: #1a1f27;
+      border-color: #2b313c;
+      color: #e6e6e6;
+    }
+
+    body.dark .contact-item:hover {
+      background: #8fb4ff;
+      color: #0f1115;
+      border-color: #8fb4ff;
+    }
+    
+    body.dark .contact-item:hover i {
+      color: #0f1115;
+    }  
+    
+    body.dark .contact-item i {
+      color: #8fb4ff;
     }
     
     body.dark .nav a {
