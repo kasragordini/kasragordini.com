@@ -1,0 +1,133 @@
+diff --git a/work/pa-market.html b/work/pa-market.html
+index 056968d..e5ef775 100644
+--- a/work/pa-market.html
++++ b/work/pa-market.html
+@@ -419,6 +419,26 @@
+       fill: var(--accent);
+     }
+ 
++    .onepager-card { padding-bottom: 24px; }
++    .onepager-recreation { width: 100%; height: auto; display: block; margin-top: 8px; }
++    .op-eyebrow {
++      font-family: "Inter", sans-serif; font-size: 12px; font-weight: 600;
++      letter-spacing: 0.06em; fill: var(--accent);
++    }
++    .op-title {
++      font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 600; fill: var(--text);
++    }
++    .op-subtitle { font-family: "Inter", sans-serif; font-size: 12px; fill: var(--muted); }
++    .op-kpi-label { font-family: "Inter", sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; fill: var(--muted); }
++    .op-kpi-value { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 600; fill: var(--accent); }
++    .op-kpi-note { font-family: "Inter", sans-serif; font-size: 11px; fill: var(--muted); }
++    .op-section-label { font-family: "Inter", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; fill: var(--muted); }
++    .op-th { font-family: "Inter", sans-serif; font-size: 11px; font-weight: 600; fill: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
++    .op-td-strong { font-family: "Inter", sans-serif; font-size: 13px; font-weight: 600; fill: var(--text); }
++    .op-td-sub { font-family: "Inter", sans-serif; font-size: 10.5px; fill: var(--muted); }
++    .op-td { font-family: "Inter", sans-serif; font-size: 13px; fill: var(--text); }
++    .op-footnote { font-family: "Inter", sans-serif; font-size: 10.5px; fill: var(--muted); font-style: italic; }
++
+     .formula-strip {
+       display: flex;
+       align-items: center;
+@@ -623,6 +643,101 @@
+ <text x="988.0" y="38.9" text-anchor="start" class="chart-callout">Weekend 85%</text>
+ 
+   <text x="60.0" y="246" text-anchor="middle" class="chart-axis-label">Aug '26</text><text x="213.3" y="246" text-anchor="middle" class="chart-axis-label">Nov '26</text><text x="366.7" y="246" text-anchor="middle" class="chart-axis-label">Feb '27</text><text x="520.0" y="246" text-anchor="middle" class="chart-axis-label">May '27</text><text x="673.3" y="246" text-anchor="middle" class="chart-axis-label">Aug '27</text><text x="826.7" y="246" text-anchor="middle" class="chart-axis-label">Nov '27</text><text x="980.0" y="246" text-anchor="middle" class="chart-axis-label">Feb '28</text>
++</svg>
++            </div>
++
++            <div class="chart-card onepager-card">
++              <div class="chart-card-head">
++                <h4>Original KPI milestone one-pager &mdash; recreated</h4>
++                <span class="legend-item">Sanitized recreation of the actual leadership one-pager</span>
++              </div>
++              <svg viewBox="0 0 1040 700" xmlns="http://www.w3.org/2000/svg" class="onepager-recreation" role="img" aria-label="KPI milestone summary for the lunch and delivery initiative">
++<rect x="0" y="0" width="1040" height="700" rx="18" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
++
++<text x="40" y="52" class="op-eyebrow">KPI MILESTONES · PRELIMINARY</text>
++<text x="40" y="88" class="op-title">Lunch &amp; Delivery Initiative</text>
++<text x="40" y="112" class="op-subtitle">Work start Aug 2026 · 18-month horizon · Calibrated to point-of-sale actuals · Figures scaled for confidentiality</text>
++<line x1="40" y1="128" x2="1000" y2="128" stroke="var(--line)" stroke-width="1"/>
++
++
++    <rect x="40.0" y="146" width="306.7" height="86" rx="12" fill="var(--bg)" stroke="var(--line)" stroke-width="1"/>
++    <text x="58.0" y="172" class="op-kpi-label">KPI 1 — MONTHLY REVENUE</text>
++    <text x="58.0" y="200" class="op-kpi-value">$45,799 &rarr; $121,177</text>
++    <text x="58.0" y="220" class="op-kpi-note">at Month 18</text>
++    
++
++    <rect x="366.7" y="146" width="306.7" height="86" rx="12" fill="var(--bg)" stroke="var(--line)" stroke-width="1"/>
++    <text x="384.7" y="172" class="op-kpi-label">KPI 2 — WEEKLY ORDERS</text>
++    <text x="384.7" y="200" class="op-kpi-value">250 &rarr; 657</text>
++    <text x="384.7" y="220" class="op-kpi-note">at Month 18</text>
++    
++
++    <rect x="693.3" y="146" width="306.7" height="86" rx="12" fill="var(--bg)" stroke="var(--line)" stroke-width="1"/>
++    <text x="711.3" y="172" class="op-kpi-label">KPI 3 — DELIVERY REVENUE</text>
++    <text x="711.3" y="200" class="op-kpi-value">$5,974 &rarr; $15,806</text>
++    <text x="711.3" y="220" class="op-kpi-note">at Month 18</text>
++    
++<text x="40" y="262" class="op-section-label">MILESTONE TABLE</text>
++<line x1="40" y1="298" x2="1000" y2="298" stroke="var(--line)" stroke-width="1"/>
++<text x="40" y="288" class="op-th">Period</text>
++<text x="260" y="288" class="op-th">Monthly Revenue</text>
++<text x="490" y="288" class="op-th">Weekly Revenue</text>
++<text x="700" y="288" class="op-th">Weekly Orders</text>
++<text x="870" y="288" class="op-th">Monthly Delivery</text>
++<rect x="40" y="288" width="960" height="44" fill="var(--bg)"/>
++<text x="40" y="310" class="op-td-strong">Baseline</text>
++<text x="40" y="326" class="op-td-sub">Aug 2026 · Start</text>
++<text x="260" y="310" class="op-td">$45,799</text>
++<text x="490" y="310" class="op-td">$11,450</text>
++<text x="700" y="310" class="op-td">250</text>
++<text x="870" y="310" class="op-td">$5,974</text>
++<rect x="40" y="332" width="960" height="44" fill="var(--paper)"/>
++<text x="40" y="354" class="op-td-strong">Month 1</text>
++<text x="40" y="370" class="op-td-sub">Sep 2026</text>
++<text x="260" y="354" class="op-td">$48,188</text>
++<text x="490" y="354" class="op-td">$12,047</text>
++<text x="700" y="354" class="op-td">262</text>
++<text x="870" y="354" class="op-td">$6,285</text>
++<rect x="40" y="376" width="960" height="44" fill="var(--bg)"/>
++<text x="40" y="398" class="op-td-strong">Month 2</text>
++<text x="40" y="414" class="op-td-sub">Oct 2026 · Outdoor closes</text>
++<text x="260" y="398" class="op-td">$41,278</text>
++<text x="490" y="398" class="op-td">$10,320</text>
++<text x="700" y="398" class="op-td">225</text>
++<text x="870" y="398" class="op-td">$5,384</text>
++<rect x="40" y="420" width="960" height="44" fill="var(--paper)"/>
++<text x="40" y="442" class="op-td-strong">Month 3</text>
++<text x="40" y="458" class="op-td-sub">Nov 2026 · Indoor only</text>
++<text x="260" y="442" class="op-td">$44,448</text>
++<text x="490" y="442" class="op-td">$11,112</text>
++<text x="700" y="442" class="op-td">242</text>
++<text x="870" y="442" class="op-td">$5,798</text>
++<rect x="40" y="464" width="960" height="44" fill="var(--bg)"/>
++<text x="40" y="486" class="op-td-strong">Month 6</text>
++<text x="40" y="502" class="op-td-sub">Feb 2027 · 6-mo review</text>
++<text x="260" y="486" class="op-td">$57,355</text>
++<text x="490" y="486" class="op-td">$14,339</text>
++<text x="700" y="486" class="op-td">311</text>
++<text x="870" y="486" class="op-td">$7,481</text>
++<rect x="40" y="508" width="960" height="44" fill="var(--paper)"/>
++<text x="40" y="530" class="op-td-strong">Month 12</text>
++<text x="40" y="546" class="op-td-sub">Aug 2027 · 1-yr mark</text>
++<text x="260" y="530" class="op-td">$144,647</text>
++<text x="490" y="530" class="op-td">$36,162</text>
++<text x="700" y="530" class="op-td">785</text>
++<text x="870" y="530" class="op-td">$18,867</text>
++<rect x="40" y="552" width="960" height="44" fill="var(--bg)"/>
++<text x="40" y="574" class="op-td-strong">Month 18</text>
++<text x="40" y="590" class="op-td-sub">Feb 2028 · End target</text>
++<text x="260" y="574" class="op-td">$121,177</text>
++<text x="490" y="574" class="op-td">$30,294</text>
++<text x="700" y="574" class="op-td">657</text>
++<text x="870" y="574" class="op-td">$15,806</text>
++<line x1="40" y1="624" x2="1000" y2="624" stroke="var(--line)" stroke-width="1"/>
++
++<text x="40" y="650" class="op-footnote">Months 2–3: seasonal outdoor capacity reduction (confirmed by operations lead). Recovers Month 4. Preliminary — subject to revision.</text>
++<text x="40" y="668" class="op-footnote">Figures scaled for confidentiality; growth trajectory and methodology shown as calculated. Recreated from the original internal one-pager.</text>
++
+ </svg>
+             </div>
+ 
