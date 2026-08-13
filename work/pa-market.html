@@ -327,6 +327,145 @@
 
     .field-full { grid-column: 1 / -1; }
 
+    /* Featured model card with visuals */
+    .model-card-featured {
+      padding: 36px;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .kpi-stat {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px;
+    }
+    .kpi-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .kpi-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .chart-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 24px 10px;
+      margin-bottom: 22px;
+    }
+    .chart-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .chart-card-head h4 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .chart-legend {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .legend-swatch {
+      width: 14px;
+      height: 3px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .legend-swatch-line, .legend-swatch-solid { background: var(--accent); }
+    .legend-swatch-dashed {
+      background: repeating-linear-gradient(90deg, var(--muted) 0 4px, transparent 4px 7px);
+    }
+    .legend-swatch-band { background: var(--accent); opacity: 0.2; height: 10px; border-radius: 3px; }
+
+    .revenue-chart, .occupancy-chart {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .chart-axis-label {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      fill: var(--muted);
+    }
+    .chart-callout {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      fill: var(--accent);
+    }
+
+    .formula-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--bg);
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 30px;
+      font-size: 0.92rem;
+    }
+    .formula-term {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+    .formula-result {
+      background: var(--accent);
+      color: var(--button-text);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .formula-op {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .source-note {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(221, 215, 206, 0.6);
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    body.dark .source-note { border-top: 1px solid rgba(255,255,255,0.07); }
+
+    @media (max-width: 700px) {
+      .kpi-row { grid-template-columns: 1fr 1fr; }
+      .model-card-featured { padding: 26px 20px; }
+      .formula-strip { font-size: 0.82rem; padding: 14px; }
+    }
+
     /* Note at bottom of case study */
     .verify-note {
       margin-top: 40px;
@@ -423,37 +562,111 @@
         <div class="model-list">
 
           <!-- Model 1: Lunch Initiative 18-month projection -->
-          <div class="model-card">
+          <div class="model-card model-card-featured">
             <div class="model-card-head">
-              <h3>Lunch Initiative &mdash; 18-Month Financial Projection Model</h3>
-              <span class="status-tag status-active">In active use</span>
+              <h3>Lunch &amp; Delivery Initiative &mdash; 18-Month Financial Projection Model</h3>
+              <span class="status-tag status-active">In active use &middot; Month 1 of 18</span>
             </div>
+
+            <div class="kpi-row">
+              <div class="kpi-stat">
+                <div class="kpi-value">$45.8k</div>
+                <div class="kpi-label">Baseline monthly revenue</div>
+              </div>
+              <div class="kpi-stat">
+                <div class="kpi-value">$121.2k</div>
+                <div class="kpi-label">Projected Month 18 revenue</div>
+              </div>
+              <div class="kpi-stat">
+                <div class="kpi-value">+165%</div>
+                <div class="kpi-label">Projected 18-month growth</div>
+              </div>
+              <div class="kpi-stat">
+                <div class="kpi-value">60% / 85%</div>
+                <div class="kpi-label">Weekday / weekend occupancy target</div>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-card-head">
+                <h4>Projected monthly revenue &mdash; 18-month ramp</h4>
+                <div class="chart-legend">
+                  <span class="legend-item"><span class="legend-swatch legend-swatch-line"></span>Total revenue</span>
+                  <span class="legend-item"><span class="legend-swatch legend-swatch-band"></span>Outdoor seating closed (seasonal)</span>
+                </div>
+              </div>
+              <svg viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg" class="revenue-chart" role="img" aria-label="Projected monthly revenue growth over 18 months">
+  <rect x="136.7" y="30" width="306.7" height="310" fill="var(--accent)" opacity="0.06" /><rect x="750.0" y="30" width="230.0" height="310" fill="var(--accent)" opacity="0.06" />
+  <line x1="60" y1="262.5" x2="980" y2="262.5" stroke="var(--line)" stroke-width="1" /><text x="50" y="266.5" text-anchor="end" class="chart-axis-label">$42k</text><line x1="60" y1="185.0" x2="980" y2="185.0" stroke="var(--line)" stroke-width="1" /><text x="50" y="189.0" text-anchor="end" class="chart-axis-label">$84k</text><line x1="60" y1="107.5" x2="980" y2="107.5" stroke="var(--line)" stroke-width="1" /><text x="50" y="111.5" text-anchor="end" class="chart-axis-label">$127k</text><line x1="60" y1="30.0" x2="980" y2="30.0" stroke="var(--line)" stroke-width="1" /><text x="50" y="34.0" text-anchor="end" class="chart-axis-label">$169k</text>
+  <path d="M 60.0 255.9 L 111.1 251.6 L 162.2 264.2 L 213.3 258.4 L 264.4 248.3 L 315.6 227.5 L 366.7 234.7 L 417.8 220.8 L 468.9 134.0 L 520.0 107.9 L 571.1 111.3 L 622.2 69.7 L 673.3 74.5 L 724.4 53.0 L 775.6 126.2 L 826.7 146.9 L 877.8 111.0 L 928.9 101.8 L 980.0 117.6 L 980.0 340 L 60.0 340 Z" fill="var(--accent)" opacity="0.08" />
+  <path d="M 60.0 255.9 L 111.1 251.6 L 162.2 264.2 L 213.3 258.4 L 264.4 248.3 L 315.6 227.5 L 366.7 234.7 L 417.8 220.8 L 468.9 134.0 L 520.0 107.9 L 571.1 111.3 L 622.2 69.7 L 673.3 74.5 L 724.4 53.0 L 775.6 126.2 L 826.7 146.9 L 877.8 111.0 L 928.9 101.8 L 980.0 117.6" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+  <circle cx="60.0" cy="255.9" r="5" fill="var(--accent)" stroke="var(--paper)" stroke-width="2" /><circle cx="366.7" cy="234.7" r="5" fill="var(--accent)" stroke="var(--paper)" stroke-width="2" /><circle cx="673.3" cy="74.5" r="5" fill="var(--accent)" stroke="var(--paper)" stroke-width="2" /><circle cx="980.0" cy="117.6" r="5" fill="var(--accent)" stroke="var(--paper)" stroke-width="2" />
+  <text x="60.0" y="239.9" text-anchor="middle" class="chart-callout">$46k</text><text x="366.7" y="218.7" text-anchor="middle" class="chart-callout">$57k</text><text x="673.3" y="58.5" text-anchor="middle" class="chart-callout">$145k</text><text x="980.0" y="101.6" text-anchor="middle" class="chart-callout">$121k</text>
+  <text x="60.0" y="366" text-anchor="middle" class="chart-axis-label">Aug '26</text><text x="213.3" y="366" text-anchor="middle" class="chart-axis-label">Nov '26</text><text x="366.7" y="366" text-anchor="middle" class="chart-axis-label">Feb '27</text><text x="520.0" y="366" text-anchor="middle" class="chart-axis-label">May '27</text><text x="673.3" y="366" text-anchor="middle" class="chart-axis-label">Aug '27</text><text x="826.7" y="366" text-anchor="middle" class="chart-axis-label">Nov '27</text><text x="980.0" y="366" text-anchor="middle" class="chart-axis-label">Feb '28</text>
+</svg>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-card-head">
+                <h4>Seat occupancy growth &mdash; weekday vs. weekend</h4>
+                <div class="chart-legend">
+                  <span class="legend-item"><span class="legend-swatch legend-swatch-solid"></span>Weekend (brunch)</span>
+                  <span class="legend-item"><span class="legend-swatch legend-swatch-dashed"></span>Weekday (lunch)</span>
+                </div>
+              </div>
+              <svg viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg" class="occupancy-chart" role="img" aria-label="Weekday and weekend seat occupancy growth over 18 months">
+  <line x1="60" y1="176.4" x2="980" y2="176.4" stroke="var(--line)" stroke-width="1" /><text x="50" y="180.4" text-anchor="end" class="chart-axis-label">20%</text><line x1="60" y1="132.9" x2="980" y2="132.9" stroke="var(--line)" stroke-width="1" /><text x="50" y="136.9" text-anchor="end" class="chart-axis-label">40%</text><line x1="60" y1="89.3" x2="980" y2="89.3" stroke="var(--line)" stroke-width="1" /><text x="50" y="93.3" text-anchor="end" class="chart-axis-label">60%</text><line x1="60" y1="45.8" x2="980" y2="45.8" stroke="var(--line)" stroke-width="1" /><text x="50" y="49.8" text-anchor="end" class="chart-axis-label">80%</text>
+  <path d="M 60.0 161.8 L 111.1 154.8 L 162.2 147.7 L 213.3 140.7 L 264.4 133.6 L 315.6 126.6 L 366.7 119.5 L 417.8 112.5 L 468.9 105.4 L 520.0 98.4 L 571.1 91.3 L 622.2 84.3 L 673.3 77.2 L 724.4 70.2 L 775.6 63.1 L 826.7 56.0 L 877.8 49.0 L 928.9 41.9 L 980.0 34.9" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+  <path d="M 60.0 205.1 L 111.1 198.6 L 162.2 192.2 L 213.3 185.8 L 264.4 179.4 L 315.6 172.9 L 366.7 166.5 L 417.8 160.1 L 468.9 153.6 L 520.0 147.2 L 571.1 140.8 L 622.2 134.3 L 673.3 127.9 L 724.4 121.5 L 775.6 115.1 L 826.7 108.6 L 877.8 102.2 L 928.9 95.8 L 980.0 89.3" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" />
+  
+<text x="988.0" y="93.3" text-anchor="start" class="chart-callout">Weekday 60%</text>
+<text x="988.0" y="38.9" text-anchor="start" class="chart-callout">Weekend 85%</text>
+
+  <text x="60.0" y="246" text-anchor="middle" class="chart-axis-label">Aug '26</text><text x="213.3" y="246" text-anchor="middle" class="chart-axis-label">Nov '26</text><text x="366.7" y="246" text-anchor="middle" class="chart-axis-label">Feb '27</text><text x="520.0" y="246" text-anchor="middle" class="chart-axis-label">May '27</text><text x="673.3" y="246" text-anchor="middle" class="chart-axis-label">Aug '27</text><text x="826.7" y="246" text-anchor="middle" class="chart-axis-label">Nov '27</text><text x="980.0" y="246" text-anchor="middle" class="chart-axis-label">Feb '28</text>
+</svg>
+            </div>
+
+            <div class="formula-strip">
+              <span class="formula-term">Available Seats</span>
+              <span class="formula-op">&times;</span>
+              <span class="formula-term">Occupancy %</span>
+              <span class="formula-op">&times;</span>
+              <span class="formula-term">Avg. Spend / Order</span>
+              <span class="formula-op">=</span>
+              <span class="formula-term formula-result">Monthly Revenue</span>
+            </div>
+
             <div class="model-fields">
               <div class="field">
                 <div class="field-label">Problem</div>
-                <p>Lunch service was significantly underperforming relative to other dayparts. Leadership needed a structured way to evaluate whether — and how — the lunch business could be revived, rather than relying on gut instinct.</p>
+                <p>Lunch service was running at roughly 7% of weekday seating capacity and 27% on weekends &mdash; a fraction of what the space could support. Leadership needed a structured, assumption-driven way to evaluate whether the daypart could be revived, and what a credible path back would actually require.</p>
               </div>
               <div class="field">
                 <div class="field-label">Approach</div>
-                <p>Built an 18-month, assumption-driven projection model to map a credible month-by-month recovery path, rather than a single end-state estimate — so leadership could see how the business was expected to ramp, not just where it might land.</p>
+                <p>Built a capacity-driven projection model &mdash; <em>Available Seats &times; Occupancy % &times; Average Spend per Order</em> &mdash; rather than a top-down revenue guess. Occupancy climbs in a straight line from today's actuals to leadership's target over 18 months, so the plan shows a month-by-month ramp instead of a single end-state number.</p>
               </div>
               <div class="field field-full">
-                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <div class="field-label">How it works</div>
                 <ul>
-                  <li>Historical lunch daypart sales, covers, and average check as the baseline</li>
-                  <li>Three scenarios (conservative / base / aggressive) built around traffic recovery rate, pricing, and marketing push</li>
-                  <li>Monthly ramp curve tying labor and food cost assumptions to projected covers, rather than holding them flat</li>
-                  <li>Sensitivity toggles so leadership could stress-test the plan against slower-than-expected recovery</li>
+                  <li>Seat inventory reconciled by zone (indoor and outdoor separately), since outdoor seating closes for winter and temporarily cuts total capacity by roughly a third</li>
+                  <li>Starting occupancy calculated directly from a full year of point-of-sale data, split by day of week &mdash; not estimated</li>
+                  <li>Average spend per order pulled per day of week from a year of transaction history, rather than one blended average, since weekday and weekend guests spend differently</li>
+                  <li>Delivery modeled as a percentage of walk-in revenue, net of platform commission, flagged as a placeholder assumption pending the delivery platform going live</li>
+                  <li>Cost structure (food, labor, overhead) applied as a percentage of revenue to roll the model up into a monthly profit projection</li>
                 </ul>
               </div>
               <div class="field">
                 <div class="field-label">What was built</div>
-                <p>A spreadsheet-based financial model with a linked assumptions tab and monthly P&amp;L projection, plus a one-page PDF summary for leadership review.</p>
+                <p>A linked spreadsheet model (capacity assumptions &rarr; monthly projection &rarr; quarterly summary), a one-page methodology brief explaining the formula and every input in plain language, and a milestone summary used directly in leadership review meetings.</p>
               </div>
               <div class="field">
-                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
-                <p>Model is actively used to track lunch performance against the 18-month plan; early tracking is being monitored against the base-case scenario as the initiative progresses.</p>
+                <div class="field-label">Outcome</div>
+                <p>Model went into active tracking at the start of the initiative. Early weekly checkpoints (Weeks 4, 8, and 12) are being compared against the projection to catch drift early, rather than waiting for a full-quarter review.</p>
               </div>
+            </div>
+
+            <div class="source-note">
+              Inputs sourced directly from a full year of point-of-sale and vendor data (Toast, Restaurant365) rather than estimated. Dollar figures on this page are scaled for confidentiality; growth rates, occupancy percentages, and the underlying methodology are shown as calculated.
             </div>
           </div>
 
