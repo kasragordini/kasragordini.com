@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGBE1DD185"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WGBE1DD185');
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Intelligence & Financial-Operational Systems — Kasra Gordini</title>
+  <meta name="description" content="Financial, operational, and analytical systems built for a multi-location hospitality business — projection modeling, cost control, inventory, pricing, purchasing, and workforce planning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://kasragordini.com/work/pa-market.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --paper: #fcfbf8;
+      --text: #1e1d1a;
+      --muted: #6e6a63;
+      --line: #ddd7ce;
+      --accent: #1f3a5f;
+      --accent-soft: #2b4a73;
+      --button-text: #f8f6f1;
+      --max-width: 1180px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --draft: #a05a2c;
+      --draft-bg: rgba(160, 90, 44, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 245, 240, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(221, 215, 206, 0.7);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      justify-self: start;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .nav {
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .theme-toggle-wrap { justify-self: end; }
+
+    #theme-toggle {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    #theme-toggle:hover { background: rgba(255,255,255,0.45); }
+
+    body.dark {
+      --bg: #0f1115;
+      --paper: #171a21;
+      --text: #e8e8e8;
+      --muted: #a7acb5;
+      --line: #2b313c;
+      --accent: #8fb4ff;
+      --accent-soft: #a7c3ff;
+      --button-text: #0f1115;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      --draft: #e0a978;
+      --draft-bg: rgba(224, 169, 120, 0.1);
+      background: var(--bg);
+      color: var(--text);
+    }
+    body.dark .site-header { background: rgba(15, 17, 21, 0.9); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    body.dark .nav a { color: #aaa; }
+    body.dark .nav a:hover { color: #fff; }
+    body.dark .eyebrow { color: #9bb6d9; }
+
+    /* Breadcrumb / back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      transition: color 0.2s ease;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /* Hero */
+    .case-hero {
+      padding: 64px 0 50px;
+      border-top: none;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4d5f78;
+      margin-bottom: 20px;
+    }
+    body.dark .eyebrow { color: #9bb6d9; }
+    .case-hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 20px;
+      max-width: 880px;
+    }
+    .case-hero .lede {
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    /* Disclosure banner */
+    .disclosure {
+      margin-top: 30px;
+      padding: 20px 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 14px;
+      font-size: 0.94rem;
+      color: var(--muted);
+      max-width: 880px;
+    }
+    .disclosure strong { color: var(--text); }
+
+    /* Scope strip: the three business lines */
+    .scope-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .scope-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    section { padding: 70px 0; border-top: 1px solid rgba(221, 215, 206, 0.7); }
+    body.dark section { border-top: 1px solid rgba(255,255,255,0.08); }
+
+    .section-label {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .group-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .group-intro {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 40px;
+    }
+
+    /* Model cards */
+    .model-list { display: grid; gap: 24px; }
+
+    .model-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .model-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .model-card h3 {
+      font-size: 1.28rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .status-active {
+      background: rgba(31, 58, 95, 0.08);
+      color: var(--accent);
+    }
+    body.dark .status-active { background: rgba(143, 180, 255, 0.12); }
+
+    .model-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 32px;
+    }
+
+    .field {
+      border-top: 1px solid rgba(221, 215, 206, 0.6);
+      padding-top: 14px;
+    }
+    body.dark .field { border-top: 1px solid rgba(255,255,255,0.07); }
+
+    .field-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .draft-flag {
+      font-size: 0.68rem;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--draft);
+      background: var(--draft-bg);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .field p {
+      font-size: 0.96rem;
+      color: var(--text);
+    }
+    .field ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .field ul li {
+      font-size: 0.94rem;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .field ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    /* Note at bottom of case study */
+    .verify-note {
+      margin-top: 40px;
+      padding: 22px 26px;
+      border: 1px dashed var(--draft);
+      border-radius: 16px;
+      background: var(--draft-bg);
+      font-size: 0.92rem;
+      color: var(--text);
+      max-width: 880px;
+    }
+    .verify-note strong { color: var(--draft); }
+
+    .site-footer {
+      border-top: 1px solid rgba(221, 215, 206, 0.7);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    body.dark .site-footer { border-top: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "brand toggle" "nav nav";
+        align-items: center;
+        gap: 14px;
+      }
+      .brand { grid-area: brand; }
+      .theme-toggle-wrap { grid-area: toggle; }
+      .nav { grid-area: nav; justify-self: start; flex-wrap: wrap; gap: 16px; }
+      .model-fields { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: min(100% - 24px, var(--max-width)); }
+      .brand { font-size: 1.7rem; }
+      .nav { width: 100%; justify-self: start; display: flex; flex-wrap: wrap; gap: 12px 18px; }
+      .nav a { font-size: 0.95rem; }
+      section { padding: 54px 0; }
+      .model-card { padding: 24px 20px; }
+      .model-card-head { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html#home" class="brand">Kasra Gordini</a>
+      <nav class="nav">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="theme-toggle-wrap">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <a href="../index.html#work" class="back-link">&larr; Back to Work</a>
+        <div class="eyebrow">Case Study &middot; Business, Financial &amp; Operational Systems</div>
+        <h1>Business Intelligence &amp; Financial-Operational Systems for a Multi-Location Hospitality Business</h1>
+        <p class="lede">
+          A connected set of financial, operational, and analytical models built to bring structure and clarity to a growing hospitality operation spanning restaurant, catering, and event service lines.
+        </p>
+
+        <div class="scope-strip">
+          <span class="scope-pill">Restaurant &amp; food service</span>
+          <span class="scope-pill">Catering</span>
+          <span class="scope-pill">Events</span>
+          <span class="scope-pill">Multi-location</span>
+        </div>
+
+        <div class="disclosure">
+          <strong>A note on the data shown here.</strong> The systems below were built for a real multi-location hospitality business. To protect the ownership and confidentiality of the underlying business data, the company name, exact figures, and identifying details have been generalized or altered — the problems, approach, and analytical methods are represented accurately.
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP 1: Financial Planning & Cost Control -->
+    <section id="financial-planning">
+      <div class="container">
+        <div class="section-label">Group 01</div>
+        <h2 class="group-title">Financial Planning &amp; Cost Control</h2>
+        <p class="group-intro">
+          Models built to give leadership a forward-looking, assumption-driven view of financial performance — turning "should we do this?" and "where is margin leaking?" into structured, testable questions.
+        </p>
+
+        <div class="model-list">
+
+          <!-- Model 1: Lunch Initiative 18-month projection -->
+          <div class="model-card">
+            <div class="model-card-head">
+              <h3>Lunch Initiative &mdash; 18-Month Financial Projection Model</h3>
+              <span class="status-tag status-active">In active use</span>
+            </div>
+            <div class="model-fields">
+              <div class="field">
+                <div class="field-label">Problem</div>
+                <p>Lunch service was significantly underperforming relative to other dayparts. Leadership needed a structured way to evaluate whether — and how — the lunch business could be revived, rather than relying on gut instinct.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Approach</div>
+                <p>Built an 18-month, assumption-driven projection model to map a credible month-by-month recovery path, rather than a single end-state estimate — so leadership could see how the business was expected to ramp, not just where it might land.</p>
+              </div>
+              <div class="field field-full">
+                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <ul>
+                  <li>Historical lunch daypart sales, covers, and average check as the baseline</li>
+                  <li>Three scenarios (conservative / base / aggressive) built around traffic recovery rate, pricing, and marketing push</li>
+                  <li>Monthly ramp curve tying labor and food cost assumptions to projected covers, rather than holding them flat</li>
+                  <li>Sensitivity toggles so leadership could stress-test the plan against slower-than-expected recovery</li>
+                </ul>
+              </div>
+              <div class="field">
+                <div class="field-label">What was built</div>
+                <p>A spreadsheet-based financial model with a linked assumptions tab and monthly P&amp;L projection, plus a one-page PDF summary for leadership review.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
+                <p>Model is actively used to track lunch performance against the 18-month plan; early tracking is being monitored against the base-case scenario as the initiative progresses.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Model 2: COGS model -->
+          <div class="model-card">
+            <div class="model-card-head">
+              <h3>Cost of Goods Sold (COGS) Model</h3>
+              <span class="status-tag status-active">In active use</span>
+            </div>
+            <div class="model-fields">
+              <div class="field">
+                <div class="field-label">Problem <span class="draft-flag">Draft — pending detail</span></div>
+                <p>With three distinct revenue lines — restaurant, catering, and events — each carrying different recipe costs and vendor pricing, leadership lacked a clear, consistent view of true food and beverage cost as a percentage of revenue by line and by location.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Approach <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Built a model to calculate theoretical COGS from recipe-level ingredient costs, compare it against actual purchasing and usage data, and surface variance so cost leakage could be caught early rather than discovered at month-end close.</p>
+              </div>
+              <div class="field field-full">
+                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <ul>
+                  <li>Recipe-level ingredient costing rolled up to a theoretical COGS % per revenue line</li>
+                  <li>Actual vendor invoice costs compared against theoretical to flag variance</li>
+                  <li>Breakout by location and by revenue stream (restaurant / catering / events) rather than one blended number</li>
+                </ul>
+              </div>
+              <div class="field">
+                <div class="field-label">What was built</div>
+                <p>A spreadsheet-based COGS tracking model with a monthly variance report used in operational reviews.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
+                <p>Gave leadership visibility into COGS variance by location and revenue line for the first time, surfacing where actual cost was drifting from recipe-based expectations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Model 3: Purchasing cost-saving system -->
+          <div class="model-card">
+            <div class="model-card-head">
+              <h3>Purchasing Cost-Saving System</h3>
+              <span class="status-tag status-active">In active use</span>
+            </div>
+            <div class="model-fields">
+              <div class="field">
+                <div class="field-label">Problem <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Purchasing decisions across multiple locations and vendors weren't being systematically compared, making it difficult to know whether the business was consistently getting the best available pricing and terms.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Approach <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Built a system to standardize how purchasing costs are compared across vendors and locations, surfacing savings opportunities and inconsistent pricing on the same items.</p>
+              </div>
+              <div class="field field-full">
+                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <ul>
+                  <li>Vendor price comparison across shared/common items purchased at multiple locations</li>
+                  <li>Flags locations paying above the best available negotiated price for the same item</li>
+                  <li>Consolidation recommendations where volume could be combined across locations for better terms</li>
+                </ul>
+              </div>
+              <div class="field">
+                <div class="field-label">What was built</div>
+                <p>A spreadsheet-based comparison model with a recurring savings-opportunity report.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
+                <p>Identified specific vendor and item-level pricing inconsistencies across locations, informing renegotiation and consolidation decisions.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP 2: Inventory & Pricing Intelligence -->
+    <section id="inventory-pricing">
+      <div class="container">
+        <div class="section-label">Group 02</div>
+        <h2 class="group-title">Inventory &amp; Pricing Intelligence</h2>
+        <p class="group-intro">
+          Models built to keep pace with a business where input costs and stock levels shift constantly across multiple locations and revenue streams.
+        </p>
+
+        <div class="model-list">
+
+          <!-- Model 4: Inventory analytics -->
+          <div class="model-card">
+            <div class="model-card-head">
+              <h3>Inventory Analytics</h3>
+              <span class="status-tag status-active">In active use</span>
+            </div>
+            <div class="model-fields">
+              <div class="field">
+                <div class="field-label">Problem <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Inventory levels across multiple locations weren't consistently visible, making it hard to tell overstock, waste, and stockout risk apart from normal operating variation.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Approach <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Built an analytical view of inventory usage and par levels by location, so patterns in waste and shortage could be caught and addressed rather than treated as one-off incidents.</p>
+              </div>
+              <div class="field field-full">
+                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <ul>
+                  <li>Usage trend tracking by item and location against set par levels</li>
+                  <li>Waste and shrinkage flagged where usage doesn't reconcile with sales-driven demand</li>
+                  <li>Location-level comparison to separate one-off issues from systemic ones</li>
+                </ul>
+              </div>
+              <div class="field">
+                <div class="field-label">What was built</div>
+                <p>A spreadsheet-based inventory tracking and analysis model with a recurring waste/variance summary.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
+                <p>Improved visibility into where waste and overstock were concentrated by location, supporting adjustments to ordering and par levels.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Model 5: Price tracking system -->
+          <div class="model-card">
+            <div class="model-card-head">
+              <h3>Price Tracking System</h3>
+              <span class="status-tag status-active">In active use</span>
+            </div>
+            <div class="model-fields">
+              <div class="field">
+                <div class="field-label">Problem <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Vendor pricing on key food and beverage inputs shifted frequently and wasn't consistently tracked, creating a risk that menu pricing would fall out of step with actual cost and quietly erode margin.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Approach <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Built a system to track vendor price movement over time on key inputs and flag when changes were significant enough to warrant a menu pricing review.</p>
+              </div>
+              <div class="field field-full">
+                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <ul>
+                  <li>Ongoing tracking of vendor price changes on core ingredients over time</li>
+                  <li>Threshold-based alerts when a price move is large enough to affect margin materially</li>
+                  <li>Direct link from price movement to affected menu items, to make pricing review decisions faster</li>
+                </ul>
+              </div>
+              <div class="field">
+                <div class="field-label">What was built</div>
+                <p>A spreadsheet-based price tracking model feeding a recurring vendor price movement report.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
+                <p>Gave leadership earlier visibility into cost pressure on key menu items, supporting more timely pricing decisions.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP 3: Workforce Optimization -->
+    <section id="workforce">
+      <div class="container">
+        <div class="section-label">Group 03</div>
+        <h2 class="group-title">Workforce Optimization</h2>
+        <p class="group-intro">
+          A model built to align labor with actual demand across dayparts, locations, and service lines — the largest controllable cost in a hospitality operation.
+        </p>
+
+        <div class="model-list">
+
+          <!-- Model 6: Staff scheduling model -->
+          <div class="model-card">
+            <div class="model-card-head">
+              <h3>Staff Scheduling Model</h3>
+              <span class="status-tag status-active">In active use</span>
+            </div>
+            <div class="model-fields">
+              <div class="field">
+                <div class="field-label">Problem <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Labor scheduling across dayparts and locations wasn't closely tied to actual demand patterns, creating a mix of overstaffing during slow periods and understaffing during peak periods.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Approach <span class="draft-flag">Draft — pending detail</span></div>
+                <p>Built a demand-based scheduling model that ties staffing levels to sales and traffic forecasts by daypart, rather than scheduling off a fixed, historical template.</p>
+              </div>
+              <div class="field field-full">
+                <div class="field-label">How it works <span class="draft-flag">Draft — pending detail</span></div>
+                <ul>
+                  <li>Historical sales and traffic patterns by daypart and day-of-week as the demand baseline</li>
+                  <li>Labor hours recommended per shift based on projected demand, not a static template</li>
+                  <li>Labor cost as a percentage of projected sales tracked against target by location</li>
+                </ul>
+              </div>
+              <div class="field">
+                <div class="field-label">What was built</div>
+                <p>A spreadsheet-based scheduling and labor-cost model used to guide weekly schedule building.</p>
+              </div>
+              <div class="field">
+                <div class="field-label">Outcome <span class="draft-flag">Draft — pending real figures</span></div>
+                <p>Improved alignment between scheduled labor hours and actual demand, supporting better labor cost management across dayparts.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="verify-note">
+          <strong>Status:</strong> The fields marked "Draft" above are my best-guess reconstructions based on the problem each model solves — written so the page has real structure to react to. They still need to be checked against what was actually built (inputs, methods, and any measurable outcomes) before this goes live.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      &copy; 2026 Personal website of Kasra Gordini
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    function updateThemeIcon() {
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+    updateThemeIcon();
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      updateThemeIcon();
+    });
+  </script>
+</body>
+</html>

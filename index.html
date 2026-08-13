@@ -391,6 +391,74 @@
       font-size: 0.98rem;
     }
 
+    .featured-case {
+      margin-top: 34px;
+      margin-bottom: 34px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px 32px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .featured-case:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .featured-case-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      writing-mode: horizontal-tb;
+    }
+    .featured-case-body h3 {
+      font-size: 1.24rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .featured-case-body p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 640px;
+      margin-bottom: 10px;
+    }
+    .featured-case-meta {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .featured-case-meta span {
+      display: inline-block;
+    }
+    .featured-case-meta span:not(:last-child)::after {
+      content: "•";
+      margin: 0 8px;
+      color: var(--line);
+    }
+    .featured-case-cta {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .area-heading {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 700px) {
+      .featured-case {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .featured-case-cta { justify-self: start; }
+    }
+
     .project-list {
       margin-top: 34px;
       display: grid;
@@ -638,12 +706,12 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">AI • Analytics • Systems</div>
+          <div class="eyebrow">Business • Operations • Analytics • AI</div>
           <h1>
-            Building intelligent systems for real-world decisions.
+            Understanding business, then building the systems that run it better.
           </h1>
           <p>
-            I work at the intersection of artificial intelligence, analytics, and business systems. My focus is on designing practical tools that bring greater clarity to operations, support better decisions, and turn complexity into something more usable.
+            I work at the intersection of business operations, financial analysis, and artificial intelligence — reading how a business actually performs, then building the models, tools, and AI-powered systems that turn that understanding into better decisions.
           </p>
 
           <div class="hero-actions">
@@ -690,34 +758,51 @@
     <section id="work">
       <div class="container">
         <div class="section-label">Work</div>
-        <h2 class="section-title">Areas of focus.</h2>
+        <h2 class="section-title">Business, financial, and operational systems.</h2>
         <p class="section-text">
-          My interests sit across a set of connected areas where strategy, data, and system design come together in practical ways.
+          I work closely with real business operations — analyzing financial and operational performance, then building the models and systems that turn that understanding into better decisions.
         </p>
 
+        <a href="work/pa-market.html" class="featured-case">
+          <div class="featured-case-tag">Case&nbsp;Study</div>
+          <div class="featured-case-body">
+            <h3>Business Intelligence &amp; Financial-Operational Systems</h3>
+            <p>
+              Six connected models built for a multi-location hospitality business — spanning financial projection, cost control, inventory, pricing, purchasing, and workforce planning.
+            </p>
+            <div class="featured-case-meta">
+              <span>Restaurant, catering &amp; events</span>
+              <span>6 models</span>
+              <span>In active use</span>
+            </div>
+          </div>
+          <div class="featured-case-cta">View case study &rarr;</div>
+        </a>
+
+        <div class="area-heading">Areas this work draws on</div>
         <div class="two-col">
           <div class="card">
-            <h3>Artificial Intelligence</h3>
+            <h3>Financial &amp; Operational Analysis</h3>
             <p>
-              Exploring practical AI systems that support operations, reasoning, automation, and stronger day-to-day decision-making.
+              Reading business performance through revenue, cost, labor, and inventory data to find where the real leverage is.
             </p>
           </div>
           <div class="card">
-            <h3>Analytics</h3>
+            <h3>Analytics &amp; Forecasting</h3>
             <p>
-              Turning raw information into clarity through structured analysis, modeling, and a strong understanding of business context.
+              Turning raw operational data into structured models — projections, variance tracking, and decision-support tools grounded in business context.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Applied Artificial Intelligence</h3>
+            <p>
+              Building AI-powered products, agents, and automations that connect directly to real business and operational problems.
             </p>
           </div>
           <div class="card">
             <h3>Product Thinking</h3>
             <p>
-              Designing tools and systems with careful attention to usefulness, adoption, and long-term value.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Operations</h3>
-            <p>
-              Applying intelligence to real workflows so that complexity becomes more manageable, operations become clearer, and decisions become more grounded.
+              Designing tools people actually use — with attention to adoption, usefulness, and long-term value, not just technical correctness.
             </p>
           </div>
         </div>
