@@ -395,13 +395,13 @@
       margin-top: 34px;
       margin-bottom: 34px;
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: 220px 1fr auto;
       align-items: center;
       gap: 28px;
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 24px;
-      padding: 30px 32px;
+      padding: 24px 32px;
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
@@ -409,12 +409,30 @@
       transform: translateY(-2px);
       border-color: var(--accent);
     }
+    .featured-case-visual {
+      position: relative;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 10px 12px 8px;
+    }
+    .featured-case-visual .mini-spark {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .featured-case-visual-stat {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+    }
     .featured-case-tag {
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.07em;
       color: var(--muted);
-      writing-mode: horizontal-tb;
+      margin-bottom: 8px;
     }
     .featured-case-body h3 {
       font-size: 1.24rem;
@@ -445,18 +463,20 @@
       color: var(--accent);
       white-space: nowrap;
     }
-    .area-heading {
-      font-size: 0.92rem;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
 
     @media (max-width: 700px) {
       .featured-case {
         grid-template-columns: 1fr;
         text-align: left;
       }
+      .featured-case-visual { max-width: 220px; }
       .featured-case-cta { justify-self: start; }
+    }
+
+    .area-heading {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
 
     .project-list {
@@ -764,8 +784,17 @@
         </p>
 
         <a href="work/pa-market.html" class="featured-case">
-          <div class="featured-case-tag">Case&nbsp;Study</div>
+          <div class="featured-case-visual">
+            <svg viewBox="0 0 260 84" xmlns="http://www.w3.org/2000/svg" class="mini-spark" role="img" aria-label="18-month revenue growth preview">
+<rect x="26.7" y="6" width="82.7" height="72" fill="var(--accent)" opacity="0.07"/><rect x="192.0" y="6" width="62.0" height="72" fill="var(--accent)" opacity="0.07"/>
+<path d="M 6.0 57.9 L 19.8 56.9 L 33.6 59.9 L 47.3 58.5 L 61.1 56.1 L 74.9 51.1 L 88.7 52.9 L 102.4 49.5 L 116.2 28.8 L 130.0 22.6 L 143.8 23.4 L 157.6 13.4 L 171.3 14.6 L 185.1 9.4 L 198.9 26.9 L 212.7 31.9 L 226.4 23.3 L 240.2 21.1 L 254.0 24.9 L 254.0 78 L 6.0 78 Z" fill="var(--accent)" opacity="0.10"/>
+<path d="M 6.0 57.9 L 19.8 56.9 L 33.6 59.9 L 47.3 58.5 L 61.1 56.1 L 74.9 51.1 L 88.7 52.9 L 102.4 49.5 L 116.2 28.8 L 130.0 22.6 L 143.8 23.4 L 157.6 13.4 L 171.3 14.6 L 185.1 9.4 L 198.9 26.9 L 212.7 31.9 L 226.4 23.3 L 240.2 21.1 L 254.0 24.9" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="6.0" cy="57.9" r="3" fill="var(--muted)"/><circle cx="254.0" cy="24.9" r="3.5" fill="var(--accent)"/>
+</svg>
+            <div class="featured-case-visual-stat">Projected +165% revenue, 18 months</div>
+          </div>
           <div class="featured-case-body">
+            <div class="featured-case-tag">Case&nbsp;Study</div>
             <h3>Business Intelligence &amp; Financial-Operational Systems</h3>
             <p>
               Six connected models built for a multi-location hospitality business — spanning financial projection, cost control, inventory, pricing, purchasing, and workforce planning.
