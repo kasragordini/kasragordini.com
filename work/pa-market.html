@@ -248,6 +248,13 @@
       color: var(--text);
     }
 
+    .model-lede {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
     .status-tag {
       display: inline-flex;
       align-items: center;
@@ -470,6 +477,27 @@
       font-weight: 600;
     }
 
+    .fact-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .fact-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      font-size: 0.86rem;
+      color: var(--text);
+    }
+    .fact-pill-caveat {
+      border-color: var(--draft);
+      background: var(--draft-bg);
+      color: var(--draft);
+      font-weight: 600;
+    }
+
     .source-note {
       margin-top: 24px;
       padding-top: 18px;
@@ -588,6 +616,8 @@
               <span class="status-tag status-active">In active use &middot; Month 1 of 18</span>
             </div>
 
+            <p class="model-lede">Lunch was running at roughly 7% of weekday and 27% of weekend seating capacity. This model plots a capacity-driven path back, built from a year of point-of-sale data rather than a top-down revenue guess.</p>
+
             <div class="kpi-row">
               <div class="kpi-stat">
                 <div class="kpi-value">$45.8k</div>
@@ -605,6 +635,16 @@
                 <div class="kpi-value">60% / 85%</div>
                 <div class="kpi-label">Weekday / weekend occupancy target</div>
               </div>
+            </div>
+
+            <div class="formula-strip">
+              <span class="formula-term">Available Seats</span>
+              <span class="formula-op">&times;</span>
+              <span class="formula-term">Occupancy %</span>
+              <span class="formula-op">&times;</span>
+              <span class="formula-term">Avg. Spend / Order</span>
+              <span class="formula-op">=</span>
+              <span class="formula-term formula-result">Monthly Revenue</span>
             </div>
 
             <div class="chart-card">
@@ -741,47 +781,17 @@
 </svg>
             </div>
 
-            <div class="formula-strip">
-              <span class="formula-term">Available Seats</span>
-              <span class="formula-op">&times;</span>
-              <span class="formula-term">Occupancy %</span>
-              <span class="formula-op">&times;</span>
-              <span class="formula-term">Avg. Spend / Order</span>
-              <span class="formula-op">=</span>
-              <span class="formula-term formula-result">Monthly Revenue</span>
-            </div>
-
-            <div class="model-fields">
-              <div class="field">
-                <div class="field-label">Problem</div>
-                <p>Lunch service was running at roughly 7% of weekday seating capacity and 27% on weekends &mdash; a fraction of what the space could support. Leadership needed a structured, assumption-driven way to evaluate whether the daypart could be revived, and what a credible path back would actually require.</p>
-              </div>
-              <div class="field">
-                <div class="field-label">Approach</div>
-                <p>Built a capacity-driven projection model &mdash; <em>Available Seats &times; Occupancy % &times; Average Spend per Order</em> &mdash; rather than a top-down revenue guess. Occupancy climbs in a straight line from today's actuals to leadership's target over 18 months, so the plan shows a month-by-month ramp instead of a single end-state number.</p>
-              </div>
-              <div class="field field-full">
-                <div class="field-label">How it works</div>
-                <ul>
-                  <li>Seat inventory reconciled by zone (indoor and outdoor separately), since outdoor seating closes for winter and temporarily cuts total capacity by roughly a third</li>
-                  <li>Starting occupancy calculated directly from a full year of point-of-sale data, split by day of week &mdash; not estimated</li>
-                  <li>Average spend per order pulled per day of week from a year of transaction history, rather than one blended average, since weekday and weekend guests spend differently</li>
-                  <li>Delivery modeled as a percentage of walk-in revenue, net of platform commission, flagged as a placeholder assumption pending the delivery platform going live</li>
-                  <li>Cost structure (food, labor, overhead) applied as a percentage of revenue to roll the model up into a monthly profit projection</li>
-                </ul>
-              </div>
-              <div class="field">
-                <div class="field-label">What was built</div>
-                <p>A linked spreadsheet model (capacity assumptions &rarr; monthly projection &rarr; quarterly summary), a one-page methodology brief explaining the formula and every input in plain language, and a milestone summary used directly in leadership review meetings.</p>
-              </div>
-              <div class="field">
-                <div class="field-label">Outcome</div>
-                <p>Model went into active tracking at the start of the initiative. Early weekly checkpoints (Weeks 4, 8, and 12) are being compared against the projection to catch drift early, rather than waiting for a full-quarter review.</p>
-              </div>
+            <div class="fact-pills">
+              <span class="fact-pill">Seats reconciled by zone &mdash; indoor &amp; outdoor tracked separately (outdoor closes for winter, cutting capacity ~1/3)</span>
+              <span class="fact-pill">Occupancy &amp; spend/order pulled per day-of-week from a year of POS data &mdash; not estimated</span>
+              <span class="fact-pill">Costs applied as % of revenue &rarr; rolls up to a monthly profit projection</span>
+              <span class="fact-pill">Linked model: capacity assumptions &rarr; monthly projection &rarr; quarterly summary + methodology brief</span>
+              <span class="fact-pill">Weekly checkpoints (Wk 4, 8, 12) tracked against the projection to catch drift early</span>
+              <span class="fact-pill fact-pill-caveat">Delivery modeled as % of walk-in revenue &mdash; placeholder, pending delivery platform launch</span>
             </div>
 
             <div class="source-note">
-              Inputs sourced directly from a full year of point-of-sale and vendor data (Toast, Restaurant365) rather than estimated. Dollar figures on this page are scaled for confidentiality; growth rates, occupancy percentages, and the underlying methodology are shown as calculated.
+              Inputs from a full year of point-of-sale and vendor data (Toast, Restaurant365); dollar figures scaled for confidentiality, methodology shown as calculated.
             </div>
           </div>
 
