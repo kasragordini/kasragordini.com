@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGBE1DD185"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WGBE1DD185');
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunch &amp; Delivery Growth Initiative — Kasra Gordini</title>
+  <meta name="description" content="An 18-month capacity-driven revenue model, back-tested to 0.1% against actuals, with the KPI reporting built to track it — for a multi-location hospitality business." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://kasragordini.com/work/lunch-initiative.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --paper: #fcfbf8;
+      --text: #1e1d1a;
+      --muted: #6e6a63;
+      --line: #ddd7ce;
+      --accent: #1f3a5f;
+      --accent-soft: #2b4a73;
+      --button-text: #f8f6f1;
+      --max-width: 1180px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --draft: #a05a2c;
+      --draft-bg: rgba(160, 90, 44, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 245, 240, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(221, 215, 206, 0.7);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      justify-self: start;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .nav {
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .theme-toggle-wrap { justify-self: end; }
+
+    #theme-toggle {
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    #theme-toggle:hover { background: rgba(255,255,255,0.45); }
+
+    body.dark {
+      --bg: #0f1115;
+      --paper: #171a21;
+      --text: #e8e8e8;
+      --muted: #a7acb5;
+      --line: #2b313c;
+      --accent: #8fb4ff;
+      --accent-soft: #a7c3ff;
+      --button-text: #0f1115;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      --draft: #e0a978;
+      --draft-bg: rgba(224, 169, 120, 0.1);
+      background: var(--bg);
+      color: var(--text);
+    }
+    body.dark .site-header { background: rgba(15, 17, 21, 0.9); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    body.dark .nav a { color: #aaa; }
+    body.dark .nav a:hover { color: #fff; }
+    body.dark .eyebrow { color: #9bb6d9; }
+
+    /* Breadcrumb / back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      transition: color 0.2s ease;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /* Hero */
+    .case-hero {
+      padding: 64px 0 50px;
+      border-top: none;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4d5f78;
+      margin-bottom: 20px;
+    }
+    body.dark .eyebrow { color: #9bb6d9; }
+    .case-hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 20px;
+      max-width: 880px;
+    }
+    .case-hero .lede {
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    /* Disclosure banner */
+    .disclosure {
+      margin-top: 30px;
+      padding: 20px 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 14px;
+      font-size: 0.94rem;
+      color: var(--muted);
+      max-width: 880px;
+    }
+    .disclosure strong { color: var(--text); }
+
+    /* Scope strip: the three business lines */
+    .scope-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .scope-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    section { padding: 70px 0; border-top: 1px solid rgba(221, 215, 206, 0.7); }
+    body.dark section { border-top: 1px solid rgba(255,255,255,0.08); }
+
+    .section-label {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .group-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .group-intro {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 40px;
+    }
+
+    /* Model cards */
+    .model-list { display: grid; gap: 24px; }
+
+    .model-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .model-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .model-card h3 {
+      font-size: 1.28rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .model-lede {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .status-active {
+      background: rgba(31, 58, 95, 0.08);
+      color: var(--accent);
+    }
+    body.dark .status-active { background: rgba(143, 180, 255, 0.12); }
+
+    .model-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 32px;
+    }
+
+    .field {
+      border-top: 1px solid rgba(221, 215, 206, 0.6);
+      padding-top: 14px;
+    }
+    body.dark .field { border-top: 1px solid rgba(255,255,255,0.07); }
+
+    .field-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .draft-flag {
+      font-size: 0.68rem;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--draft);
+      background: var(--draft-bg);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .field p {
+      font-size: 0.96rem;
+      color: var(--text);
+    }
+    .field ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .field ul li {
+      font-size: 0.94rem;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .field ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    /* Featured model card with visuals */
+    .model-card-featured {
+      padding: 36px;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .kpi-stat {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px;
+    }
+    .kpi-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .kpi-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .chart-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 24px 10px;
+      margin-bottom: 22px;
+    }
+    .chart-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .chart-card-head h4 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .chart-legend {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .legend-swatch {
+      width: 14px;
+      height: 3px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .legend-swatch-line, .legend-swatch-solid { background: var(--accent); }
+    .legend-swatch-dashed {
+      background: repeating-linear-gradient(90deg, var(--muted) 0 4px, transparent 4px 7px);
+    }
+    .legend-swatch-band { background: var(--accent); opacity: 0.2; height: 10px; border-radius: 3px; }
+
+    .revenue-chart, .occupancy-chart {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .chart-axis-label {
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      fill: var(--muted);
+    }
+    .chart-callout {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      fill: var(--accent);
+    }
+
+    .onepager-card { padding-bottom: 24px; }
+    .onepager-recreation { width: 100%; height: auto; display: block; margin-top: 8px; }
+    .op-eyebrow {
+      font-family: "Inter", sans-serif; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.06em; fill: var(--accent);
+    }
+    .op-title {
+      font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 600; fill: var(--text);
+    }
+    .op-subtitle { font-family: "Inter", sans-serif; font-size: 12px; fill: var(--muted); }
+    .op-kpi-label { font-family: "Inter", sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; fill: var(--muted); }
+    .op-kpi-value { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 600; fill: var(--accent); }
+    .op-kpi-note { font-family: "Inter", sans-serif; font-size: 11px; fill: var(--muted); }
+    .op-section-label { font-family: "Inter", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; fill: var(--muted); }
+    .op-th { font-family: "Inter", sans-serif; font-size: 11px; font-weight: 600; fill: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+    .op-td-strong { font-family: "Inter", sans-serif; font-size: 13px; font-weight: 600; fill: var(--text); }
+    .op-td-sub { font-family: "Inter", sans-serif; font-size: 10.5px; fill: var(--muted); }
+    .op-td { font-family: "Inter", sans-serif; font-size: 13px; fill: var(--text); }
+    .op-footnote { font-family: "Inter", sans-serif; font-size: 10.5px; fill: var(--muted); font-style: italic; }
+
+    .formula-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--bg);
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 30px;
+      font-size: 0.92rem;
+    }
+    .formula-term {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+    .formula-result {
+      background: var(--accent);
+      color: var(--button-text);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .formula-op {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .fact-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .fact-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      font-size: 0.86rem;
+      color: var(--text);
+    }
+    .fact-pill-caveat {
+      border-color: var(--draft);
+      background: var(--draft-bg);
+      color: var(--draft);
+      font-weight: 600;
+    }
+
+    .source-note {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(221, 215, 206, 0.6);
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    body.dark .source-note { border-top: 1px solid rgba(255,255,255,0.07); }
+
+    @media (max-width: 700px) {
+      .kpi-row { grid-template-columns: 1fr 1fr; }
+      .model-card-featured { padding: 26px 20px; }
+      .formula-strip { font-size: 0.82rem; padding: 14px; }
+    }
+
+    /* Note at bottom of case study */
+    .verify-note {
+      margin-top: 40px;
+      padding: 22px 26px;
+      border: 1px dashed var(--draft);
+      border-radius: 16px;
+      background: var(--draft-bg);
+      font-size: 0.92rem;
+      color: var(--text);
+      max-width: 880px;
+    }
+    .verify-note strong { color: var(--draft); }
+
+    .site-footer {
+      border-top: 1px solid rgba(221, 215, 206, 0.7);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    body.dark .site-footer { border-top: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "brand toggle" "nav nav";
+        align-items: center;
+        gap: 14px;
+      }
+      .brand { grid-area: brand; }
+      .theme-toggle-wrap { grid-area: toggle; }
+      .nav { grid-area: nav; justify-self: start; flex-wrap: wrap; gap: 16px; }
+      .model-fields { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: min(100% - 24px, var(--max-width)); }
+      .brand { font-size: 1.7rem; }
+      .nav { width: 100%; justify-self: start; display: flex; flex-wrap: wrap; gap: 12px 18px; }
+      .nav a { font-size: 0.95rem; }
+      section { padding: 54px 0; }
+      .model-card { padding: 24px 20px; }
+      .model-card-head { flex-direction: column; align-items: flex-start; }
+    }
+  
+
+    /* ===== Lunch initiative deep-dive ===== */
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+    .tag-chip {
+      padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line);
+      background: var(--paper); font-size: 0.82rem; color: var(--muted);
+    }
+    .stat-bar {
+      display: grid; grid-template-columns: 2fr repeat(5, 1fr); gap: 14px; margin-top: 40px;
+    }
+    .stat-tile {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 18px;
+      padding: 22px 18px; box-shadow: var(--shadow);
+    }
+    .stat-num {
+      font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 3.4vw, 2.7rem);
+      font-weight: 600; color: var(--accent); line-height: 1; margin-bottom: 8px;
+    }
+    .stat-cap { font-size: 0.78rem; color: var(--muted); line-height: 1.35; }
+    .stat-tile-hero { background: var(--accent); border-color: var(--accent); }
+    .stat-tile-hero .stat-num, .stat-tile-hero .stat-cap { color: var(--button-text); }
+    .stat-tile-hero .stat-num { font-size: clamp(2.6rem, 4.6vw, 3.6rem); }
+
+    .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; }
+    .waffle-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .waffle-card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 20px;
+      padding: 22px; text-align: center; box-shadow: var(--shadow);
+    }
+    .waffle {
+      display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px;
+      max-width: 220px; margin: 0 auto 16px; aspect-ratio: 1;
+    }
+    .waffle i { display: block; border-radius: 2px; background: var(--line); }
+    .waffle i.on { background: var(--accent); }
+    .waffle-num {
+      font-family: "Cormorant Garamond", serif; font-size: 2.6rem; font-weight: 600;
+      color: var(--accent); line-height: 1;
+    }
+    .waffle-label { font-weight: 600; font-size: 0.92rem; margin-top: 6px; }
+    .waffle-sub { font-size: 0.78rem; color: var(--muted); }
+    .fact-stack { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .formula-xl {
+      padding: 30px 24px; gap: 16px; margin-bottom: 28px; background: var(--paper);
+    }
+    .formula-xl .formula-term {
+      font-size: clamp(0.95rem, 1.8vw, 1.25rem); padding: 12px 22px;
+    }
+    .formula-xl .formula-op { font-size: 1.6rem; }
+
+    .decision-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .decision-card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 20px;
+      padding: 26px 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px;
+    }
+    .decision-n { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .decision-big {
+      font-family: "Cormorant Garamond", serif; font-size: 3rem; font-weight: 600;
+      color: var(--accent); line-height: 1.05;
+    }
+    .decision-card h4 { font-size: 1rem; font-weight: 600; }
+    .decision-card p { font-size: 0.84rem; color: var(--muted); }
+    .hbar { display: grid; grid-template-columns: 34px 1fr 52px; gap: 8px; align-items: center; font-size: 0.8rem; margin-top: 4px; }
+    .hbar-label { color: var(--muted); }
+    .hbar-track { height: 10px; border-radius: 999px; background: var(--line); overflow: hidden; display: block; }
+    .hbar-fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+    .hbar-val { text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* Calibration block — inverts with the theme via --accent / --button-text */
+    .cal-block {
+      background: var(--accent); color: var(--button-text); border-radius: 26px;
+      padding: clamp(26px, 5vw, 52px); box-shadow: var(--shadow);
+    }
+    .cal-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .cal-rows { display: grid; gap: 22px; }
+    .cal-row-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; font-size: 0.86rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .cal-row-val { font-family: "Cormorant Garamond", serif; font-size: 2.2rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
+    .cal-track { position: relative; height: 16px; border-radius: 999px; }
+    .cal-track::before { content: ""; position: absolute; inset: 0; border-radius: 999px; background: currentColor; opacity: 0.16; }
+    .cal-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: currentColor; }
+    .cal-fill-actual { opacity: 0.62; }
+    .cal-result { text-align: center; border-left: 1px solid currentColor; padding-left: 40px; }
+    .cal-result-num {
+      font-family: "Cormorant Garamond", serif; font-size: clamp(4rem, 9vw, 6.5rem);
+      font-weight: 600; line-height: 1;
+    }
+    .cal-result-cap { font-size: 0.9rem; opacity: 0.85; margin-top: 6px; }
+    .cal-delta {
+      display: inline-block; margin-top: 14px; padding: 6px 16px; border-radius: 999px;
+      border: 1px solid currentColor; font-weight: 600; font-size: 0.9rem;
+    }
+    .cal-foot { margin-top: 26px; font-size: 0.8rem; opacity: 0.75; }
+
+    .chart-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .chart-svg { width: 100%; min-width: 600px; height: auto; display: block; }
+    .chart-note { font-family: "Inter", sans-serif; font-size: 12px; fill: var(--muted); font-style: italic; }
+    .chart-axis-sub { font-family: "Inter", sans-serif; font-size: 10.5px; fill: var(--muted); }
+    .sw { width: 14px; height: 10px; border-radius: 3px; display: inline-block; }
+    .sw-summer { background: var(--accent); }
+    .sw-winter { background: var(--accent); opacity: 0.38; }
+    .sw-today { background: var(--muted); opacity: 0.5; }
+    .sw-wd { background: var(--accent); opacity: 0.55; }
+    .sw-we { background: var(--accent); }
+
+    .occ-row { display: grid; grid-template-columns: 82px 1fr; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
+    .occ-row:first-child { border-top: none; }
+    .occ-label { font-size: 0.84rem; font-weight: 600; }
+    .occ-bars { display: grid; gap: 6px; }
+    .occ-bar { display: grid; grid-template-columns: 1fr 52px; gap: 10px; align-items: center; }
+    .occ-track { height: 10px; border-radius: 999px; background: var(--line); overflow: hidden; display: block; }
+    .occ-fill { display: block; height: 100%; border-radius: 999px; background: var(--accent); }
+    .occ-wd { opacity: 0.55; }
+    .occ-val { font-size: 0.8rem; text-align: right; font-variant-numeric: tabular-nums; }
+
+    .dow-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 22px; align-items: stretch; }
+    .split > *, .cal-grid > *, .dow-grid > * { min-width: 0; }
+    .dow-grid .chart-card { margin-bottom: 0; }
+    .callout-stack { display: grid; gap: 16px; }
+    .callout-card {
+      background: var(--accent); color: var(--button-text); border-radius: 22px;
+      padding: 28px 24px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .callout-big { font-family: "Cormorant Garamond", serif; font-size: 4.4rem; font-weight: 600; line-height: 1; }
+    .callout-cap { font-size: 0.9rem; opacity: 0.9; margin-top: 8px; }
+    .callout-sub { font-size: 0.82rem; opacity: 0.75; margin-top: 4px; font-variant-numeric: tabular-nums; }
+    .callout-card-soft { background: var(--paper); color: var(--text); border: 1px solid var(--line); }
+    .callout-card-soft .callout-big { color: var(--accent); font-size: 3rem; }
+
+    .zone-bar { display: flex; gap: 3px; margin: 8px 0 18px; }
+    .zone { border-radius: 8px; padding: 12px 8px; display: flex; flex-direction: column; gap: 2px; min-width: 0; text-align: center; }
+    .zone-in { background: var(--accent); color: var(--button-text); }
+    .zone-out { background: transparent; border: 1.5px dashed var(--accent); color: var(--accent); }
+    .zone-pct { font-family: "Cormorant Garamond", serif; font-size: 1.35rem; font-weight: 600; line-height: 1.1; }
+    .zone-name { font-size: 0.68rem; letter-spacing: 0.02em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .cap-compare { display: grid; gap: 12px; margin-top: 8px; }
+    .cap-row { display: grid; grid-template-columns: 110px 1fr 54px; gap: 12px; align-items: center; font-size: 0.84rem; }
+    .cap-track { height: 22px; border-radius: 8px; background: var(--line); overflow: hidden; display: block; }
+    .cap-fill { display: block; height: 100%; background: var(--accent); }
+    .cap-fill-winter { opacity: 0.45; }
+    .cap-val { text-align: right; font-weight: 600; }
+    .cap-callout {
+      margin-top: 20px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+      padding: 16px 20px; border-radius: 16px; background: var(--bg); border: 1px dashed var(--line);
+    }
+    .cap-callout b { font-family: "Cormorant Garamond", serif; font-size: 2.4rem; color: var(--accent); line-height: 1; }
+    .cap-callout span { font-size: 0.88rem; color: var(--muted); }
+
+    .del-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+    .del-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .del-card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px;
+      box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px;
+    }
+    .del-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+    .del-n { font-family: "Cormorant Garamond", serif; font-size: 1.6rem; font-weight: 600; color: var(--accent); }
+    .del-aud { font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+    .del-aud-ext { color: var(--accent); border-color: var(--accent); }
+    .del-card h4 { font-size: 1.04rem; font-weight: 600; }
+    .del-fmt { font-size: 0.78rem; color: var(--muted); }
+    .del-line { font-size: 0.88rem; }
+    .del-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .del-chip { font-size: 0.72rem; padding: 3px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+    .del-badge {
+      align-self: flex-start; margin-top: 8px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+      padding: 4px 10px; border-radius: 6px;
+    }
+    .del-badge-warn { color: var(--draft); background: var(--draft-bg); border: 1px solid var(--draft); }
+    .stamp { display: inline-block; }
+
+    .heat { margin-top: 6px; }
+    .heat-row { display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: center; margin-bottom: 5px; }
+    .heat-label { font-size: 0.78rem; color: var(--muted); }
+    .heat-cells { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; }
+    .hc { display: block; height: 22px; border-radius: 5px; background: var(--accent); opacity: calc(0.12 + var(--h) * 0.78); }
+    .hc.step { margin-left: 6px; }
+    .heat-head { display: grid; grid-template-columns: 40px 1fr; gap: 10px; margin-bottom: 8px; }
+    .heat-head-cells { display: grid; grid-template-columns: 4fr 4fr; gap: 10px; font-size: 0.74rem; color: var(--muted); text-align: center; }
+    .heat-total { display: grid; grid-template-columns: 40px 1fr; gap: 10px; margin-top: 10px; font-size: 0.8rem; }
+    .heat-total-cells { display: grid; grid-template-columns: 4fr 4fr; gap: 10px; text-align: center; font-weight: 600; color: var(--accent); }
+
+    .tool-rows { display: grid; gap: 14px; }
+    .tool-row { display: grid; grid-template-columns: 90px 1fr; gap: 14px; align-items: center; }
+    .tool-row-label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+
+    .stake-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stake-card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 22px 20px;
+      box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px;
+    }
+    .stake-icon {
+      width: 42px; height: 42px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line);
+      display: grid; place-items: center; color: var(--accent);
+    }
+    .stake-card h4 { font-size: 0.98rem; font-weight: 600; line-height: 1.3; }
+    .stake-pills { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+    .stake-pills .fact-pill { font-size: 0.78rem; padding: 5px 12px; }
+    .rule-strip { margin-top: 22px; margin-bottom: 0; }
+
+    .back-row { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 12px 22px; border-radius: 999px;
+      font-size: 0.94rem; font-weight: 600; border: 1px solid var(--line);
+    }
+    .btn-primary { background: var(--accent); color: var(--button-text); border-color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .stat-bar { grid-template-columns: repeat(3, 1fr); }
+      .stat-tile-hero { grid-column: span 3; }
+      .split, .dow-grid, .cal-grid { grid-template-columns: minmax(0, 1fr); }
+      .decision-grid { grid-template-columns: 1fr; }
+      .stake-grid { grid-template-columns: 1fr 1fr; }
+      .cal-result { border-left: none; padding-left: 0; border-top: 1px solid currentColor; padding-top: 24px; }
+    }
+    @media (max-width: 600px) {
+      .stat-bar { grid-template-columns: 1fr 1fr; }
+      .stat-tile-hero, .stat-tile:last-child { grid-column: span 2; }
+      .del-grid { grid-template-columns: 1fr; }
+      .stake-grid { grid-template-columns: 1fr; }
+      .waffle-pair { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .waffle-card { padding: 14px; }
+      .cap-row { grid-template-columns: 84px 1fr 46px; }
+      .tool-row { grid-template-columns: 1fr; gap: 6px; }
+      .zone-name { font-size: 0.6rem; }
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html#home" class="brand">Kasra Gordini</a>
+      <nav class="nav">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="theme-toggle-wrap">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="case-hero">
+      <div class="container">
+        <a href="pa-market.html#financial-planning" class="back-link">&larr; Back to case study</a>
+        <div class="eyebrow">Case Study &middot; Financial Modeling &amp; KPI Design</div>
+        <h1>Lunch &amp; Delivery Growth Initiative</h1>
+        <p class="lede">An 18-month, capacity-driven revenue model that turns &ldquo;grow lunch&rdquo; into month-by-month targets &mdash; and the reporting built to track them.</p>
+
+        <div class="hero-tags">
+          <span class="tag-chip">Financial modeling</span>
+          <span class="tag-chip">Forecasting</span>
+          <span class="tag-chip">KPI design</span>
+          <span class="tag-chip">Python</span>
+          <span class="tag-chip">Excel automation</span>
+          <span class="tag-chip">Toast POS</span>
+          <span class="tag-chip">Restaurant365</span>
+        </div>
+
+        <div class="stat-bar">
+          <div class="stat-tile stat-tile-hero">
+            <div class="stat-num">0.1%</div>
+            <div class="stat-cap">Model error vs. actual sales, back-tested on the latest full month</div>
+          </div>
+          <div class="stat-tile"><div class="stat-num">18</div><div class="stat-cap">Months projected</div></div>
+          <div class="stat-tile"><div class="stat-num">6.2&times;</div><div class="stat-cap">Weekday revenue growth target</div></div>
+          <div class="stat-tile"><div class="stat-num">$144.6k</div><div class="stat-cap">Month-12 revenue target</div></div>
+          <div class="stat-tile"><div class="stat-num">~12.7k</div><div class="stat-cap">Orders analyzed</div></div>
+          <div class="stat-tile"><div class="stat-num">7</div><div class="stat-cap">Deliverables built</div></div>
+        </div>
+
+        <div class="disclosure">Dollar, order and seat figures are scaled for confidentiality. Percentages, ratios and methods are shown as calculated.</div>
+      </div>
+    </section>
+
+    <!-- 01 CONTEXT -->
+    <section id="context">
+      <div class="container">
+        <div class="section-label">01 &middot; Starting point</div>
+        <h2 class="group-title">Most lunch seats sat empty.</h2>
+        <div class="split">
+          <div class="waffle-pair"><div class="waffle-card"><div class="waffle" role="img" aria-label="Weekday lunch of seats filled"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div><div class="waffle-num">7%</div><div class="waffle-label">Weekday lunch</div><div class="waffle-sub">of seats filled today</div></div><div class="waffle-card"><div class="waffle" role="img" aria-label="Weekend brunch of seats filled"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="waffle-num">27%</div><div class="waffle-label">Weekend brunch</div><div class="waffle-sub">of seats filled today</div></div></div>
+          <div>
+            <div class="fact-stack">
+              <span class="fact-pill">Lunch window 11am&ndash;4pm</span>
+              <span class="fact-pill">Wed&ndash;Sun</span>
+              <span class="fact-pill">6 zones &middot; indoor + outdoor</span>
+              <span class="fact-pill">External marketing agency engaged</span>
+            </div>
+            <div class="formula-strip rule-strip" style="margin-top:26px">
+              <span class="formula-term">Business goal</span>
+              <span class="formula-op">&rarr;</span>
+              <span class="formula-term">Monthly targets</span>
+              <span class="formula-op">&rarr;</span>
+              <span class="formula-term formula-result">Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 METHOD -->
+    <section id="method">
+      <div class="container">
+        <div class="section-label">02 &middot; Method</div>
+        <h2 class="group-title">Capacity-first, not trend-extrapolated.</h2>
+        <div class="formula-strip formula-xl">
+          <span class="formula-term">Available Seats</span>
+          <span class="formula-op">&times;</span>
+          <span class="formula-term">Occupancy %</span>
+          <span class="formula-op">&times;</span>
+          <span class="formula-term">Avg. Spend / Order</span>
+          <span class="formula-op">=</span>
+          <span class="formula-term formula-result">Revenue</span>
+        </div>
+
+        <div class="decision-grid">
+          <div class="decision-card">
+            <div class="decision-n">Decision 1</div>
+            <div class="decision-big">10&times;</div>
+            <h4>One-year sample, not one month</h4>
+            <p>Wednesday orders: full year vs. July alone</p>
+          </div>
+          <div class="decision-card">
+            <div class="decision-n">Decision 2</div>
+            <h4>Spend per order, by day</h4>
+            <div class="hbar"><span class="hbar-label">Wed</span><span class="hbar-track"><span class="hbar-fill" style="width:84.4%"></span></span><span class="hbar-val">$38.00</span></div><div class="hbar"><span class="hbar-label">Thu</span><span class="hbar-track"><span class="hbar-fill" style="width:94.7%"></span></span><span class="hbar-val">$42.60</span></div><div class="hbar"><span class="hbar-label">Fri</span><span class="hbar-track"><span class="hbar-fill" style="width:92.0%"></span></span><span class="hbar-val">$41.40</span></div><div class="hbar"><span class="hbar-label">Sat</span><span class="hbar-track"><span class="hbar-fill" style="width:89.6%"></span></span><span class="hbar-val">$40.30</span></div><div class="hbar"><span class="hbar-label">Sun</span><span class="hbar-track"><span class="hbar-fill" style="width:86.2%"></span></span><span class="hbar-val">$38.80</span></div>
+            <p>$38&ndash;$43 &middot; no blended average</p>
+          </div>
+          <div class="decision-card">
+            <div class="decision-n">Decision 3</div>
+            <div class="decision-big">Jul &rsquo;26</div>
+            <h4>Baseline = latest actuals</h4>
+            <p>Starting occupancy back-solved from real sales</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 CALIBRATION -->
+    <section id="calibration">
+      <div class="container">
+        <div class="section-label">03 &middot; Back-test</div>
+        <h2 class="group-title">Model vs. reality.</h2>
+        <div class="cal-block">
+          <div class="cal-grid">
+            <div class="cal-rows">
+              <div>
+                <div class="cal-row-head"><span>Model projection</span><span class="cal-row-val">$36,170</span></div>
+                <div class="cal-track"><span class="cal-fill" style="width:100%"></span></div>
+              </div>
+              <div>
+                <div class="cal-row-head"><span>Actual (Toast POS)</span><span class="cal-row-val">$36,123</span></div>
+                <div class="cal-track"><span class="cal-fill cal-fill-actual" style="width:99.87%"></span></div>
+              </div>
+            </div>
+            <div class="cal-result">
+              <div class="cal-result-num">0.1%</div>
+              <div class="cal-result-cap">margin of error</div>
+              <div class="cal-delta">&Delta; $47</div>
+            </div>
+          </div>
+          <div class="cal-foot">Net sales, 11am&ndash;4pm, after discounts and voids &middot; calendar-exact weekday mix</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 GROWTH -->
+    <section id="growth">
+      <div class="container">
+        <div class="section-label">04 &middot; Growth curve</div>
+        <h2 class="group-title">18 months, month by month.</h2>
+
+        <div class="chart-card">
+          <div class="chart-card-head">
+            <h4>Projected monthly revenue</h4>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="sw sw-summer"></span>Outdoor open</span>
+              <span class="legend-item"><span class="sw sw-winter"></span>Outdoor closed (winter)</span>
+            </div>
+          </div>
+          <div class="chart-scroll"><svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg" class="chart-svg" role="img" aria-label="Projected monthly revenue, 19 months, winter months shaded"><rect x="130.2" y="22" width="216.6" height="274" fill="var(--accent)" opacity="0.07"/><rect x="563.5" y="22" width="180.5" height="274" fill="var(--accent)" opacity="0.07"/><line x1="58" y1="296.0" x2="744" y2="296.0" stroke="var(--line)"/><text x="50" y="300.0" text-anchor="end" class="chart-axis-label">$0</text><line x1="58" y1="229.0" x2="744" y2="229.0" stroke="var(--line)"/><text x="50" y="233.0" text-anchor="end" class="chart-axis-label">$40k</text><line x1="58" y1="162.0" x2="744" y2="162.0" stroke="var(--line)"/><text x="50" y="166.0" text-anchor="end" class="chart-axis-label">$80k</text><line x1="58" y1="95.0" x2="744" y2="95.0" stroke="var(--line)"/><text x="50" y="99.0" text-anchor="end" class="chart-axis-label">$120k</text><line x1="58" y1="28.0" x2="744" y2="28.0" stroke="var(--line)"/><text x="50" y="32.0" text-anchor="end" class="chart-axis-label">$160k</text><rect x="63.8" y="219.3" width="24.6" height="76.7" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="99.9" y="215.3" width="24.6" height="80.7" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="136.0" y="226.9" width="24.6" height="69.1" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="172.1" y="221.5" width="24.6" height="74.5" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="208.2" y="212.3" width="24.6" height="83.7" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="244.3" y="193.3" width="24.6" height="102.7" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="280.4" y="199.9" width="24.6" height="96.1" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="316.5" y="187.2" width="24.6" height="108.8" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="352.6" y="108.0" width="24.6" height="188.0" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="388.7" y="84.2" width="24.6" height="211.8" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="424.8" y="87.3" width="24.6" height="208.7" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="460.9" y="49.3" width="24.6" height="246.7" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="497.0" y="53.7" width="24.6" height="242.3" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="533.1" y="34.0" width="24.6" height="262.0" rx="3" fill="var(--accent)" opacity="0.95"/><rect x="569.3" y="100.9" width="24.6" height="195.1" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="605.4" y="119.8" width="24.6" height="176.2" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="641.5" y="87.0" width="24.6" height="209.0" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="677.6" y="78.6" width="24.6" height="217.4" rx="3" fill="var(--accent)" opacity="0.38"/><rect x="713.7" y="93.0" width="24.6" height="203.0" rx="3" fill="var(--accent)" opacity="0.38"/><text x="76.1" y="211.3" text-anchor="middle" class="chart-callout">$46k</text><text x="292.7" y="191.9" text-anchor="middle" class="chart-callout">$57k</text><text x="509.3" y="45.7" text-anchor="middle" class="chart-callout">$145k</text><text x="725.9" y="85.0" text-anchor="middle" class="chart-callout">$121k</text><text x="76.1" y="318" text-anchor="middle" class="chart-axis-label">Aug '26</text><text x="184.4" y="318" text-anchor="middle" class="chart-axis-label">Nov '26</text><text x="292.7" y="318" text-anchor="middle" class="chart-axis-label">Feb '27</text><text x="401.0" y="318" text-anchor="middle" class="chart-axis-label">May '27</text><text x="509.3" y="318" text-anchor="middle" class="chart-axis-label">Aug '27</text><text x="617.6" y="318" text-anchor="middle" class="chart-axis-label">Nov '27</text><text x="725.9" y="318" text-anchor="middle" class="chart-axis-label">Feb '28</text><text x="166.3" y="192.9" text-anchor="middle" class="chart-note">Outdoor closes</text><line x1="166.3" y1="198.9" x2="166.3" y2="215.5" stroke="var(--muted)" stroke-dasharray="3 3"/></svg></div>
+        </div>
+
+        <div class="chart-card" style="padding-bottom:18px">
+          <div class="chart-card-head">
+            <h4>Occupancy ramp &mdash; equal monthly steps</h4>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="sw sw-wd"></span>Weekday</span>
+              <span class="legend-item"><span class="sw sw-we"></span>Weekend</span>
+            </div>
+          </div>
+          <div class="occ-row"><div class="occ-label">Today</div><div class="occ-bars"><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-wd" style="width:6.9%"></span></span><span class="occ-val">6.9%</span></div><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-we" style="width:26.7%"></span></span><span class="occ-val">26.7%</span></div></div></div><div class="occ-row"><div class="occ-label">Month 6</div><div class="occ-bars"><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-wd" style="width:24.6%"></span></span><span class="occ-val">24.6%</span></div><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-we" style="width:46.1%"></span></span><span class="occ-val">46.1%</span></div></div></div><div class="occ-row"><div class="occ-label">Month 12</div><div class="occ-bars"><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-wd" style="width:42.3%"></span></span><span class="occ-val">42.3%</span></div><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-we" style="width:65.6%"></span></span><span class="occ-val">65.6%</span></div></div></div><div class="occ-row"><div class="occ-label">Month 18</div><div class="occ-bars"><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-wd" style="width:60.0%"></span></span><span class="occ-val">60.0%</span></div><div class="occ-bar"><span class="occ-track"><span class="occ-fill occ-we" style="width:85.0%"></span></span><span class="occ-val">85.0%</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 DAY OF WEEK -->
+    <section id="day-of-week">
+      <div class="container">
+        <div class="section-label">05 &middot; Day of week</div>
+        <h2 class="group-title">Not every day is the same problem.</h2>
+        <div class="dow-grid">
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <h4>Revenue on a typical day</h4>
+              <div class="chart-legend">
+                <span class="legend-item"><span class="sw sw-today"></span>Today</span>
+                <span class="legend-item"><span class="sw sw-we"></span>Month 12</span>
+              </div>
+            </div>
+            <div class="chart-scroll"><svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart-svg" role="img" aria-label="Daily revenue, today versus month 12, by day of week"><line x1="58" y1="300.0" x2="744" y2="300.0" stroke="var(--line)"/><text x="50" y="304.0" text-anchor="end" class="chart-axis-label">$0</text><line x1="58" y1="235.0" x2="744" y2="235.0" stroke="var(--line)"/><text x="50" y="239.0" text-anchor="end" class="chart-axis-label">$2k</text><line x1="58" y1="170.0" x2="744" y2="170.0" stroke="var(--line)"/><text x="50" y="174.0" text-anchor="end" class="chart-axis-label">$4k</text><line x1="58" y1="105.0" x2="744" y2="105.0" stroke="var(--line)"/><text x="50" y="109.0" text-anchor="end" class="chart-axis-label">$6k</text><line x1="58" y1="40.0" x2="744" y2="40.0" stroke="var(--line)"/><text x="50" y="44.0" text-anchor="end" class="chart-axis-label">$8k</text><rect x="83.6" y="275.8" width="40" height="24.2" rx="3" fill="var(--muted)" opacity="0.5"/><rect x="129.6" y="150.5" width="40" height="149.5" rx="3" fill="var(--accent)"/><text x="149.6" y="142.5" text-anchor="middle" class="chart-callout">6.2&times;</text><text x="126.6" y="322" text-anchor="middle" class="chart-axis-label">Wed</text><text x="126.6" y="338" text-anchor="middle" class="chart-axis-sub">Lunch</text><rect x="220.8" y="272.8" width="40" height="27.2" rx="3" fill="var(--muted)" opacity="0.5"/><rect x="266.8" y="132.4" width="40" height="167.6" rx="3" fill="var(--accent)"/><text x="286.8" y="124.4" text-anchor="middle" class="chart-callout">6.2&times;</text><text x="263.8" y="322" text-anchor="middle" class="chart-axis-label">Thu</text><text x="263.8" y="338" text-anchor="middle" class="chart-axis-sub">Lunch</text><rect x="358.0" y="273.6" width="40" height="26.4" rx="3" fill="var(--muted)" opacity="0.5"/><rect x="404.0" y="137.1" width="40" height="162.9" rx="3" fill="var(--accent)"/><text x="424.0" y="129.1" text-anchor="middle" class="chart-callout">6.2&times;</text><text x="401.0" y="322" text-anchor="middle" class="chart-axis-label">Fri</text><text x="401.0" y="338" text-anchor="middle" class="chart-axis-sub">Lunch</text><rect x="495.2" y="199.8" width="40" height="100.2" rx="3" fill="var(--muted)" opacity="0.5"/><rect x="541.2" y="54.1" width="40" height="245.9" rx="3" fill="var(--accent)"/><text x="561.2" y="46.1" text-anchor="middle" class="chart-callout">2.5&times;</text><text x="538.2" y="322" text-anchor="middle" class="chart-axis-label">Sat</text><text x="538.2" y="338" text-anchor="middle" class="chart-axis-sub">Brunch</text><rect x="632.4" y="203.6" width="40" height="96.4" rx="3" fill="var(--muted)" opacity="0.5"/><rect x="678.4" y="63.2" width="40" height="236.8" rx="3" fill="var(--accent)"/><text x="698.4" y="55.2" text-anchor="middle" class="chart-callout">2.5&times;</text><text x="675.4" y="322" text-anchor="middle" class="chart-axis-label">Sun</text><text x="675.4" y="338" text-anchor="middle" class="chart-axis-sub">Brunch</text></svg></div>
+          </div>
+          <div class="callout-stack">
+            <div class="callout-card">
+              <div class="callout-big">6.2&times;</div>
+              <div class="callout-cap">Weekday lunch</div>
+              <div class="callout-sub">$746 &rarr; $4,601 (Wed)</div>
+            </div>
+            <div class="callout-card callout-card-soft">
+              <div class="callout-big">2.5&times;</div>
+              <div class="callout-cap">Weekend brunch</div>
+            </div>
+          </div>
+        </div>
+        <div class="fact-pills" style="margin-top:22px">
+          <span class="fact-pill">Three one-metric slides: Revenue &middot; Orders &middot; Occupancy</span>
+          <span class="fact-pill">Weekday and weekend strategies tracked separately</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 SEASONALITY -->
+    <section id="seasonality">
+      <div class="container">
+        <div class="section-label">06 &middot; Seasonality</div>
+        <h2 class="group-title">Capacity isn&rsquo;t constant.</h2>
+        <div class="chart-card" style="padding-bottom:24px">
+          <div class="chart-card-head">
+            <h4>Share of seating capacity, by zone</h4>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="sw sw-summer"></span>Indoor &middot; year-round</span>
+              <span class="legend-item"><span class="sw" style="border:1.5px dashed var(--accent)"></span>Outdoor &middot; seasonal</span>
+            </div>
+          </div>
+          <div class="zone-bar"><div class="zone zone-in" style="flex:30.14"><span class="zone-pct">30%</span><span class="zone-name">Dining room</span></div><div class="zone zone-in" style="flex:4.93"><span class="zone-pct">5%</span><span class="zone-name">Bar</span></div><div class="zone zone-in" style="flex:15.07"><span class="zone-pct">15%</span><span class="zone-name">Wine room</span></div><div class="zone zone-in" style="flex:15.36"><span class="zone-pct">15%</span><span class="zone-name">Tavern</span></div><div class="zone zone-out" style="flex:12.46"><span class="zone-pct">12%</span><span class="zone-name">Balcony</span></div><div class="zone zone-out" style="flex:22.03"><span class="zone-pct">22%</span><span class="zone-name">Courtyard</span></div></div>
+          <div class="cap-compare">
+            <div class="cap-row"><span>Summer</span><span class="cap-track"><span class="cap-fill" style="width:100%"></span></span><span class="cap-val">100%</span></div>
+            <div class="cap-row"><span>Winter</span><span class="cap-track"><span class="cap-fill cap-fill-winter" style="width:66%"></span></span><span class="cap-val">66%</span></div>
+          </div>
+          <div class="cap-callout"><b>&minus;34%</b><span>capacity when outdoor closes &mdash; built into every month of the model</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 DELIVERABLES -->
+    <section id="deliverables">
+      <div class="container">
+        <div class="section-label">07 &middot; Deliverables</div>
+        <h2 class="group-title">7 deliverables. Two audiences.</h2>
+        <div class="del-legend">
+          <span class="del-aud del-aud-ext">External</span>
+          <span class="del-aud">Internal</span>
+          <span class="del-badge del-badge-warn">PRELIMINARY &middot; DRAFT</span>
+        </div>
+        <div class="del-grid"><div class="del-card"><div class="del-top"><span class="del-n">01</span><span class="del-aud del-aud-int">Internal</span></div><h4>Combined financial model</h4><div class="del-fmt">Excel &middot; 5 tabs</div><div class="del-line">Inputs &rarr; projection &rarr; milestones &rarr; quarters</div><div class="del-chips"><span class="del-chip">Actuals</span><span class="del-chip">Inputs</span><span class="del-chip">18-mo projection</span><span class="del-chip">Day-of-week</span><span class="del-chip">Quarterly</span></div></div><div class="del-card"><div class="del-top"><span class="del-n">02</span><span class="del-aud del-aud-ext">External</span></div><h4>KPI one-pager</h4><div class="del-fmt">PDF &middot; 1 page</div><div class="del-line">3 KPIs &times; 7 checkpoints</div><span class="del-badge del-badge-warn">PRELIMINARY</span></div><div class="del-card"><div class="del-top"><span class="del-n">03</span><span class="del-aud del-aud-int">All stakeholders</span></div><h4>Methodology guide</h4><div class="del-fmt">PDF &middot; 2 pages</div><div class="del-line">Every number, with its source</div></div><div class="del-card"><div class="del-top"><span class="del-n">04</span><span class="del-aud del-aud-ext">External</span></div><h4>Day-of-week slides</h4><div class="del-fmt">PDF &middot; 3 pages</div><div class="del-line">Revenue / Orders / Occupancy &mdash; one metric per page</div><span class="del-badge del-badge-warn">PRELIMINARY &middot; DRAFT</span></div><div class="del-card"><div class="del-top"><span class="del-n">05</span><span class="del-aud del-aud-int">Internal</span></div><h4>Gross profit analysis</h4><div class="del-fmt">PDF &middot; 2 pages</div><div class="del-line">Monthly + per-day annualized value</div><span class="del-badge del-badge-warn">NOT FOR DISTRIBUTION</span></div><div class="del-card"><div class="del-top"><span class="del-n">06</span><span class="del-aud del-aud-int">Internal</span></div><h4>8-week tracker</h4><div class="del-fmt">Excel</div><div class="del-line">Targets pre-filled &middot; actuals in yellow &middot; auto-delta</div></div><div class="del-card"><div class="del-top"><span class="del-n">07</span><span class="del-aud del-aud-int">Internal</span></div><h4>8-week tracker visual</h4><div class="del-fmt">PDF &middot; landscape</div><div class="del-line">Both metrics, 8 weeks, one page</div></div></div>
+
+        <div class="chart-card" style="margin-top:22px;padding-bottom:22px">
+          <div class="chart-card-head">
+            <h4>8-week tracker &mdash; weekly revenue targets</h4>
+            <span class="legend-item">Step-up at Week 5</span>
+          </div>
+          <div class="heat-head"><span></span><div class="heat-head-cells"><span>Weeks 1&ndash;4</span><span>Weeks 5&ndash;8</span></div></div>
+          <div class="heat"><div class="heat-row"><span class="heat-label">Wed</span><span class="heat-cells"><i class="hc " style="--h:0.22"></i><i class="hc " style="--h:0.22"></i><i class="hc " style="--h:0.22"></i><i class="hc " style="--h:0.22"></i><i class="hc step" style="--h:0.31"></i><i class="hc " style="--h:0.31"></i><i class="hc " style="--h:0.31"></i><i class="hc " style="--h:0.31"></i></span></div><div class="heat-row"><span class="heat-label">Thu</span><span class="heat-cells"><i class="hc " style="--h:0.24"></i><i class="hc " style="--h:0.24"></i><i class="hc " style="--h:0.24"></i><i class="hc " style="--h:0.24"></i><i class="hc step" style="--h:0.35"></i><i class="hc " style="--h:0.35"></i><i class="hc " style="--h:0.35"></i><i class="hc " style="--h:0.35"></i></span></div><div class="heat-row"><span class="heat-label">Fri</span><span class="heat-cells"><i class="hc " style="--h:0.24"></i><i class="hc " style="--h:0.24"></i><i class="hc " style="--h:0.24"></i><i class="hc " style="--h:0.24"></i><i class="hc step" style="--h:0.34"></i><i class="hc " style="--h:0.34"></i><i class="hc " style="--h:0.34"></i><i class="hc " style="--h:0.34"></i></span></div><div class="heat-row"><span class="heat-label">Sat</span><span class="heat-cells"><i class="hc " style="--h:0.89"></i><i class="hc " style="--h:0.89"></i><i class="hc " style="--h:0.89"></i><i class="hc " style="--h:0.89"></i><i class="hc step" style="--h:1.00"></i><i class="hc " style="--h:1.00"></i><i class="hc " style="--h:1.00"></i><i class="hc " style="--h:1.00"></i></span></div><div class="heat-row"><span class="heat-label">Sun</span><span class="heat-cells"><i class="hc " style="--h:0.86"></i><i class="hc " style="--h:0.86"></i><i class="hc " style="--h:0.86"></i><i class="hc " style="--h:0.86"></i><i class="hc step" style="--h:0.96"></i><i class="hc " style="--h:0.96"></i><i class="hc " style="--h:0.96"></i><i class="hc " style="--h:0.96"></i></span></div></div>
+          <div class="heat-total"><span></span><div class="heat-total-cells"><span>$8,444 / wk</span><span>$10,210 / wk</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 TOOLS -->
+    <section id="tools">
+      <div class="container">
+        <div class="section-label">08 &middot; Stack</div>
+        <h2 class="group-title">Tools.</h2>
+        <div class="tool-rows">
+          <div class="tool-row"><span class="tool-row-label">Build</span><div class="fact-stack"><span class="fact-pill">Python &middot; openpyxl</span><span class="fact-pill">Python &middot; ReportLab</span><span class="fact-pill">Custom recalculation script</span></div></div>
+          <div class="tool-row"><span class="tool-row-label">Data</span><div class="fact-stack"><span class="fact-pill">Toast POS</span><span class="fact-pill">Restaurant365</span></div></div>
+          <div class="tool-row"><span class="tool-row-label">Output</span><div class="fact-stack"><span class="fact-pill">Excel &middot; input cells vs. calculated cells</span><span class="fact-pill">PDF &middot; brand-consistent layouts</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 STAKEHOLDERS -->
+    <section id="stakeholders">
+      <div class="container">
+        <div class="section-label">09 &middot; Stakeholders</div>
+        <h2 class="group-title">Four audiences. Four styles.</h2>
+        <div class="stake-grid">
+          <div class="stake-card">
+            <div class="stake-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h4>Owner</h4>
+            <div class="stake-pills"><span class="fact-pill">Waterfall: big picture first</span><span class="fact-pill">Data reconciled before trusted</span></div>
+          </div>
+          <div class="stake-card">
+            <div class="stake-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+            <h4>Operations manager</h4>
+            <div class="stake-pills"><span class="fact-pill">Summary first</span><span class="fact-pill">Usable now, refined later</span></div>
+          </div>
+          <div class="stake-card">
+            <div class="stake-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h4>External marketing agency</h4>
+            <div class="stake-pills"><span class="fact-pill">KPI one-pager first</span><span class="fact-pill">Everything marked preliminary</span></div>
+          </div>
+          <div class="stake-card">
+            <div class="stake-icon"><i class="fa-solid fa-store"></i></div>
+            <h4>Front-of-house manager</h4>
+            <div class="stake-pills"><span class="fact-pill">Data source, not model user</span><span class="fact-pill">Seats + season confirmed</span></div>
+          </div>
+        </div>
+        <div class="formula-strip rule-strip">
+          <span class="formula-term">Budget &middot; locked at launch</span>
+          <span class="formula-op">vs.</span>
+          <span class="formula-term formula-result">Actuals</span>
+          <span class="formula-op">+</span>
+          <span class="formula-term">Separate forecast if actuals miss</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-label">10 &middot; Demonstrated</div>
+        <h2 class="group-title">Skills in this project.</h2>
+        <div class="fact-stack">
+          <span class="fact-pill">Capacity-driven modeling</span>
+          <span class="fact-pill">Back-testing against actuals</span>
+          <span class="fact-pill">Sample-size judgment</span>
+          <span class="fact-pill">KPI framework design</span>
+          <span class="fact-pill">Seasonal capacity modeling</span>
+          <span class="fact-pill">Budget vs. forecast discipline</span>
+          <span class="fact-pill">Python Excel &amp; PDF automation</span>
+          <span class="fact-pill">POS &amp; accounting systems</span>
+          <span class="fact-pill">Internal vs. external deliverables</span>
+        </div>
+        <div class="back-row">
+          <a href="pa-market.html#financial-planning" class="btn btn-primary">&larr; Back to case study</a>
+          <a href="../index.html#work" class="btn">Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      &copy; 2026 Personal website of Kasra Gordini
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    function updateThemeIcon() {
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+    updateThemeIcon();
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      updateThemeIcon();
+    });
+  </script>
+</body>
+</html>
